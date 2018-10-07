@@ -142,10 +142,18 @@ repository](https://github.com/lih/WiQEE-pages) (which is actually a
 submodule of the first repository, for those of you who care about
 such things).
 
-If you want to add, or correct a page on this site, you can use the
+If you want to contribute to this specific site, you can use the
 power of Pull Requests on the WiQEE-pages repository (the second one),
 by forking it and creating a new branch from the existing
-`contributor-template`.
+`contributor-template`. In a shell, that would be :
+
+~~~~~{.shell}
+git clone -b contributor-template https://github.com/lih/WiQEE-pages.git my-wiqee
+cd my-wiqee && git checkout -b contributor-my-name
+... edit edit edit commit ...
+git pull-request
+~~~~~~
+
 
 Example pages (they will get better)
 ----------------
