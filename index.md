@@ -43,7 +43,7 @@ next to the generated output. Clicking on those steps will, as in the
 previous case and without surprises, show you the steps that were
 taken to produce this output.
 
-A Concatenative Language
+A Concatenative Scripting Language
 ------------------------
 
 If you peeked at the examples given before, you may have noticed
@@ -77,10 +77,11 @@ like the one CaPriCon provides :
     step by step, with complete control and visibility over the state
     of the environment at every stage.
 
-    To facilitate this process of exploration, you can install the
-    [interactive CaPriCon
-    interpreter](downloads/capricon.linux.x86_64.tar.xz), that is used
-    to power this site.
+    To experience this process of exploration, you can install the
+    interactive CaPriCon interpreter (for
+    [Linux](downloads/capricon.linux.x86_64.tar.xz) or
+    [OSX](downloads/capricon.osx.x86_64.tar.xz)), that is used to
+    power this site. This interpreter can be run
 
 If you still aren't quite sure how to go about writing your own
 scripts, [this tutorial](capricon-tutorial.md) may help walk you
@@ -110,11 +111,38 @@ values onto their induction principle, hence the name of the calculus.
 This generalization can be applied to model many common cases which
 previously required the introduction of abstract-only inductive types,
 including but not limited to : general dependent inductive types,
-complete with recursive and mutually-recursive types; co-inductive
+complete with recursive and inductive-inductive types; co-inductive
 types and their associated semantics; and even some kinds of quotient
-types (I haven't fully fleshed out all the useful bits yet).
+types, though the full scope of those quotient types is still to be
+discovered.
 
-Where to start ?
+### How does it work ?
+
+It's actually quite a simple operation when terms are represented
+using De Bruijin indices. You can look at [CaPriCon's Haskell
+implementation](https://github.com/lih/stack-libs/blob/master/capricon/src/Data/CaPriCon.hs)
+of this model to convince yourself of that. All in all, the whole
+interpreter/typechecker/pattern-matcher boils down to ~300 lines of
+code.
+
+If you feel hesitant about trusting a bunch of Haskell code, don't
+hesitate to start hijacking bits of it to write CaPriCon interepreters
+in your languages of choice ! Mine just happens to be Haskell, but
+maybe yours will bring something new and interesting to the table as
+well.
+
+Contributing to WiQEE
+---------------------
+
+I encourage you to contribute to WiQEE in any way you'd like. You may
+find the project template for this site [in this GitHub
+repository](https://github.com/lih/WiQEE), and the source for the
+actual pages in this [other GitHub
+repository](https://github.com/lih/WiQEE-pages) (which is actually a
+submodule of the first repository, for those of you who care about
+such things).
+
+Example pages (they will get better)
 ----------------
 
 The basics :
