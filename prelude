@@ -1,8 +1,10 @@
-list 'each lookup swap def
-'dict-keys dict 'keys lookup pop def
+'nop { { } } def
+'get { nop nop lookup } def
 
+'each list 1 dupn get def
+'dict-keys dict 'keys get def
 'import-keys {
-  { 1 dupn swap lookup swap def } each
+  { 1 dupn 1 dupn get def } each
   pop
 } def
 
@@ -32,3 +34,19 @@ list 'each lookup swap def
 'stache { "%v" printf } def
 
 'vis { show-context "-------\n" printf show-stack } def
+
+'-> { dup 1 swapn swap intro dup [ swap "'%s" format 'variable ] quote def } def
+'! 'extro-lambda $ def
+'? 'extro-forall $ def
+
+'use {
+  dup open swap
+  cache-dir "%s/%s.mdc" format module
+  dup 'exports { import-keys } { pop } lookup
+} def
+'export { 'exports swap def } def
+
+'( '[ $ def
+') { ] applyl } def
+
+'defconstr { 1 dupn swap showdef def } def

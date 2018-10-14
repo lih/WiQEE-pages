@@ -1,20 +1,13 @@
 % Encoding Structural Equality in CaPriCon
 % Marc Coiffier
 
-> 'Eq_context {
->   'x swap def 'A swap def
->   A 'a intro 0 universe 1 foralls 'Eq intro
->   x 'Eq variable apply 'refl intro } def
+> Type 'A -> A 'x -> A 'y ->
+> 
+> 'Eq_context { A 'a -> Type ? '.Eq -> .Eq ( x ) '.refl -> } def
+> 
+> 'Eq Eq_context .Eq ( y ) ? ? "x = y" defconstr
+> 'refl Eq_context .refl ! ! "refl x" defconstr
 
-> Type 'A intro 'A variable dup 'x intro 'y intro
+The type of {{Eq 'e -> e mu ! dup stache}} is {{type stache}}.
 
-> 'Eq 'A variable 'x variable Eq_context 'y variable 'Eq variable apply 2 foralls def
-> 'refl 'A variable 'x variable Eq_context 'refl variable 2 lambdas def
->  Eq "x = y" showdef
->  refl "refl x" showdef
-
-The type of {{Eq 'e intro 'e variable mu 1 lambdas dup stache}} is {{type stache}}.
-
-> 3 lambdas
-
-
+> 3 lambdas [ 'Eq 'refl ] export

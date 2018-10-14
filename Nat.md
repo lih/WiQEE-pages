@@ -1,19 +1,13 @@
 % Natural Numbers, or the best way to enumerate anything
 % Marc Coiffier
 
-> 'Nat_context {
->    Type 'Nat intro
->   'Nat variable 'zero intro
->   'Nat variable 'n intro 'Nat variable 1 foralls 'succ intro
-> } def
+> 'Nat_context { Type '.Nat -> .Nat '.zero -> .Nat 'n -> .Nat ? '.succ -> } def
 
-> 'Nat Nat_context 'Nat variable 3 foralls def
-> Nat 'Nat showdef
-> 'zero Nat_context 'zero variable 3 lambdas def
-> zero "0" showdef
-> 'succ Nat 'n intro Nat_context 'succ variable [ 'n variable ] applyl 3 lambdas def
-> succ "S n" showdef 1 lambdas
+> 'Nat Nat_context .Nat 3 foralls "Nat" defconstr
+> 'zero Nat_context .zero 3 lambdas "0" defconstr
+> Nat 'n -> 'succ Nat_context .succ ( n ( .Nat .zero .succ ) ) 3 lambdas "S n" defconstr !
 
 The `Nat` type is defined to {{Nat stache}}. {{Nat 'n
 intro 'n variable mu extro-lambda dup stache}} has type {{type stache}}.
 
+{{succ dup stache}} has type {{type stache}}.

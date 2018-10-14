@@ -23,7 +23,7 @@ through dedicated syntaxes. The comment formatting language itself is
 Markdown in this case, although it would be trivial to adapt it to
 other textual markup languages such as TeX.
 
-Literate Programming 
+Literate Programming in Wiki Form
 --------------------
 
 Everything you've read until now is a comment of the "index.md"
@@ -67,9 +67,9 @@ like the one CaPriCon provides :
     syntax, only the words and what they mean.
 
     The CaPriCon language only has ~50 basic words in its vocabulary,
-    which are referenced [here][:capricon-words]. Beyond that, you can
-    define your own words by composing the existing ones into
-    so-called "quotes", written `{ word1..wordn }`.
+    which are referenced [in this lexicon][:capricon-words]. Beyond
+    that, you can define your own words by composing the existing ones
+    into so-called "quotes", written `{ word1..wordn }`.
 
   - _exploration :_ concatenative languages are very well-suited to
     implement incremental development environments, in which you can
@@ -81,7 +81,15 @@ like the one CaPriCon provides :
     interactive CaPriCon interpreter (for
     [Linux](downloads/capricon.linux.x86_64.tar.xz) or
     [OSX](downloads/capricon.osx.x86_64.tar.xz)), that is used to
-    power this site. This interpreter can be run
+    power this site. This interpreter can be run as-is, but it is
+    usually preferrable to load a *prelude* before any useful
+    interaction can occur.
+
+    A prelude is simply a file containing the basic definitions needed
+    to write simple programs. Without one, you're left with the basic
+    functions, which require you to be much more verbose. The default
+    CaPriCon prelude can be found in the above packages, under the
+    name "prelude".
 
 If you still aren't quite sure how to go about writing your own
 scripts, [this tutorial](capricon-tutorial.md) may help walk you
@@ -116,7 +124,7 @@ types and their associated semantics; and even some kinds of quotient
 types, though the full scope of those quotient types is still to be
 discovered.
 
-### How does it work ?
+### Enough talk, show me the code
 
 It's actually quite a simple operation when terms are represented
 using De Bruijin indices. You can look at [CaPriCon's Haskell
@@ -131,31 +139,40 @@ in your languages of choice ! Mine just happens to be Haskell, but
 maybe yours will bring something new and interesting to the table as
 well.
 
-Contributing to WiQEE
+Contributing to WiQEE, or creating your own
 ---------------------
 
-I encourage you to contribute to WiQEE in any way you'd like. You may
-find the project template for this site [in this GitHub
-repository](https://github.com/lih/WiQEE), and the source for the
-actual pages in this [other GitHub
+It goes without saying that I encourage you to contribute to WiQEE in
+any way you'd like. You may find the project template for this site
+[in this GitHub repository](https://github.com/lih/WiQEE), and the
+source for the actual pages in this [other GitHub
 repository](https://github.com/lih/WiQEE-pages) (which is actually a
 submodule of the first repository, for those of you who care about
 such things).
 
-If you want to contribute to this specific site, you can use the
-power of Pull Requests on the WiQEE-pages repository (the second one),
-by forking it and creating a new branch from the existing
-`contributor-template`. In a shell, that would be :
+If you want to contribute to this specific site, you can use the power
+of Pull Requests on the WiQEE-pages repository (the second one), by
+forking it and creating a new branch from the existing
+`contributor-template`. In the command-line, that would be :
 
 ~~~~~{.shell}
 git clone -b contributor-template https://github.com/lih/WiQEE-pages.git my-wiqee
-cd my-wiqee && git checkout -b contributor-my-name
-... edit edit edit commit ...
+cd my-wiqee && git checkout --track -b contributor-me
+...
+... edit edit edit commit
+...
 git pull-request
 ~~~~~~
 
+You can also "run" your own version of this site (how exciting !), by
+downloading the first repository, putting your pages in the
+`src/pages` subdirectory, and running `make` over the whole
+thing. You'll need Pandoc and Sass to be installed, for Markdown and
+SCSS processing, as well as CaPriCon for obvious reasons. Once `make`
+has run its course, you should find everything in the `public`
+subdirectory.
 
-Example pages (they will get better)
+Example pages (they will get better, I promise)
 ----------------
 
 The basics :

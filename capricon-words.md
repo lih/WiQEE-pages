@@ -151,6 +151,11 @@ Tries to convert the top stack element to an integer, if possible.
 Interacting with the environment
 --------------------------------
 
+### `get-env`
+
+Lookup the environment variable whose name is at the top of the stack. If
+that variable is undefined, the empty string is produced.
+
 ### `exit`
 
 Exits the interpreter, immediately and unconditionally.
@@ -169,7 +174,7 @@ String-Indexed Dictionaries
 
 ### `empty`
 
-Pushes the an empty dictionary onto the stack.
+Pushes the empty dictionary onto the stack.
 
 ### `vocabulary`
 
@@ -203,7 +208,7 @@ Examples :
 
 > 'x 1 def
 > 'x_module { 'x 2 def } "x_module.mdc" module def
-> x_module 'x lookup pop 'x $ "x = %v; x_module.x = %v" printf
+> x_module 'x { } { } lookup 'x $ "x = %v; x_module.x = %v" printf
 
 Contructing typed terms
 -----------------------
