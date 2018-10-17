@@ -7,7 +7,6 @@
 > 'zero Nat_context .zero 3 lambdas "0" defconstr
 > Nat 'n -> 'succ Nat_context .succ ( n ( .Nat .zero .succ ) ) 3 lambdas "S n" defconstr !
 
-The `Nat` type is defined to {{Nat stache}}. {{Nat 'n
-intro 'n variable mu extro-lambda dup stache}} has type {{type stache}}.
+The `Nat` type is defined to {{Nat}}. {{Nat 'n -> n mu ! dup}} has type {{type}}.
 
-{{succ dup stache}} has type {{type stache}}.
+{{succ dup}} has type {{type}}.

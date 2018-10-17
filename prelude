@@ -50,3 +50,5 @@
 ') { ] applyl } def
 
 'defconstr { 1 dupn swap showdef def } def
+
+'mustache. { show } def

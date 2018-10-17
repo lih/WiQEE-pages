@@ -151,11 +151,6 @@ Tries to convert the top stack element to an integer, if possible.
 Interacting with the environment
 --------------------------------
 
-### `get-env`
-
-Lookup the environment variable whose name is at the top of the stack. If
-that variable is undefined, the empty string is produced.
-
 ### `exit`
 
 Exits the interpreter, immediately and unconditionally.
@@ -164,10 +159,22 @@ Exits the interpreter, immediately and unconditionally.
 
 Print the string at the top of the stack into the current document.
 
-### `open`
+### `source`
 
-Opens an external module, and pushes a quote on the stack with its
-contents.
+Opens an external source file, and pushes a quote on the stack with
+its contents.
+
+### `cache`
+
+Given a resource name and a quote, does one of two things :
+
+  - if the resource already exists, try to open it as a CaPriCon
+    object, ignoring the quote
+  - otherwise, run the quote and store its result in the resource
+    for future use
+
+After the builtin has run, the contents of the requested object can be
+found at the top of the stack.
 
 String-Indexed Dictionaries
 ---------------------------
