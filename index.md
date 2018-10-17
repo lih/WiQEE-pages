@@ -180,3 +180,4 @@ The basics :
   - [Booleans][:Bool]
   - [Equalities][:Eq]
   - [Natural numbers][:Nat]
+  - [Lists][:List]
