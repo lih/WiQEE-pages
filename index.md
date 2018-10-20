@@ -180,4 +180,3 @@ The basics :
   - [Natural numbers][:Naturals]
   - [Lists][:Lists]
   - [Relations][:Relations]
-
