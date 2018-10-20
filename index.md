@@ -135,10 +135,10 @@ interpreter/typechecker/pattern-matcher boils down to ~300 lines of
 index-shifting code.
 
 If you feel hesitant about trusting a bunch of Haskell functions
-written by a stranger, don't hesitate to start hijacking bits of it to
-write CaPriCon interepreters in your languages of choice ! Mine just
-happens to be Haskell, but maybe yours will bring something new and
-interesting to the table as well.
+written by a stranger on the Internet, don't hesitate to start
+hijacking bits of it to write CaPriCon interepreters in your languages
+of choice ! Mine just happens to be Haskell, but maybe yours will
+bring something new and interesting to the table as well.
 
 Contributing to WiQEE, or creating your own
 ===========================================
