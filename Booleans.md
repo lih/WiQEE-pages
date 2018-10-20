@@ -16,9 +16,9 @@ and '.false' hypotheses.
 
 We can test that 'true' and 'false' have the correct type :
 
-  - type of {{true dup stache}} : {{type stache}}
-  - type of {{false dup stache}} : {{type stache}}
-  - type of {{Bool 'b -> b mu ! dup stache}} : {{type stache}}
+  - type of {{true dup}} : {{type}}
+  - type of {{false dup}} : {{type}}
+  - type of {{Bool 'b -> b mu ! dup}} : {{type}}
 
 Functions on Booleans
 ---------------------
@@ -26,19 +26,10 @@ Functions on Booleans
 Then, we can start defining first-level combinators, such as 'not', 'and' and 'or' :
 
 > 'not Bool 'b -> Bool_context b ( .Bool .false .true ) ! ! ! ! def
-
-not is now defined to {{not stache}}. 'not true' is {{true not apply
-stache}}, and 'not false' is {{false not apply stache}}; 'not (not b)'
-is {{Bool 'b intro 'b variable not apply not apply stache extro-forall}}.
-
 > 'and Bool 'x -> Bool 'y -> Bool_context x ( .Bool y ( .Bool .true .false ) .false ) ! ! ! ! ! def
-
-'and' is {{and stache}}, 'and true true' is {{and [ true true ] applyl
-stache}}. 'and false true' is {{Bool 'x intro and [ false 'x variable ] applyl 1 lambdas
-stache}}. 'and true false' is {{and [ true false ] applyl stache}}.
-
 > 'or Bool 'x -> Bool 'y -> Bool_context x ( .Bool .true y ( .Bool .true .false ) ) ! ! ! ! ! def
 
-'or true false' is {{or [ true false ] applyl stache}}.
+As always, we should verify the type of our combinators, and test
+whether they truly conform to their specification :
 
-> [ 'Bool 'true 'false 'not 'and 'or ] export
+> [ 'not 'or 'and ] { dup $ type swap "  - $%s : %l$\n" printf } each

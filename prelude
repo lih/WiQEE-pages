@@ -52,3 +52,5 @@
 'defconstr { 1 dupn swap showdef def } def
 
 'mustache. { show } def
+
+'recursor { dup 2 shaft -> variable mu ! } def
