@@ -1,0 +1,5 @@
+'. { vis } def
+Type 'A -> Type ? 'f ->
+Type
+vis
+
