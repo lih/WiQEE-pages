@@ -114,7 +114,8 @@ Each branch of the base inductive type is "projected" through $\mu$ to
 a parallel branch in a larger universe, with additional "rays" to
 provide reflection into that universe. $\mu$ thus acts like a sort of
 *prism* (in fact, an *endoprism*) that continuously projects inductive
-values onto their induction principle, hence the name of the calculus.
+values onto their induction principle, giving rise to the eponymous
+*prismatic constructions*.
 
 This generalization can be applied to model many common cases which
 previously required the introduction of abstract-only inductive types,
