@@ -35,7 +35,7 @@
 
 'vis { show-context "-------\n" printf show-stack } def
 
-'-> { dup 1 swapn swap intro dup [ swap "'%s" format 'variable ] quote def } def
+'-> { dup 1 swapn swap intro { {@ dup @} variable } def } def
 '! 'extro-lambda $ def
 '? 'extro-forall $ def
 
