@@ -9,4 +9,4 @@
 
 The `Nat` type is defined to {{Nat tex}}. {{Nat 'n recursor dup tex}} has type {{type tex}}.
 
-{{succ dup}} has type {{type}}.
+{{succ dup tex}} has type {{type tex}}.
