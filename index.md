@@ -90,9 +90,6 @@ like the one CaPriCon provides :
     CaPriCon prelude can be found in the above packages, under the
     name "prelude".
 
-[capricon-linux]: downloads/capricon.linux.x86_64.tar.xz
-[capricon-macos]: downloads/capricon.osx.x86_64.tar.xz
-
 If you still aren't quite sure how to go about writing your own
 scripts, [this tutorial](capricon-tutorial.md) may help walk you
 through the first hurdles.
