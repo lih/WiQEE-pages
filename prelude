@@ -52,6 +52,6 @@
 'defconstr { 1 dupn swap showdef def } def
 
 'mustache. { show } def
-'tex { 'mustache. { "$%l$\n" printf 'mustache. {@ dup $ @} def } def } def
+'tex { 'mustache. { "$\small %l$\n" printf 'mustache. {@ dup $ @} def } def } def
 
 'recursor { dup 2 shaft -> variable mu ! } def
