@@ -37,8 +37,7 @@ indicated in the source by starting a line with `> `.
 
 You can also write some inline code between "mustaches" (a mustache is
 a pair of nested `{}` inside the source), which will be executed as
-part of a paragraph, and whose output {{"will look like this"
-printf}}. If all works well, you should see a small image of steps
+part of a paragraph, and whose output {{"will look like this" raw}}. If all works well, you should see a small image of steps
 next to the generated output. Clicking on those steps will, as in the
 previous case and without surprises, show you the steps that were
 taken to produce this output.
