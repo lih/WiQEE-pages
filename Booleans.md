@@ -16,8 +16,8 @@ and '.false' hypotheses.
 
 We can test that $true$ and 'false' have the correct type :
 
-  - type of {{true dup}} : {{type}}
-  - type of {{false dup}} : {{type}}
+  - type of {{true dup}} : {{type tex}}
+  - type of {{false dup}} : {{type tex}}
   - type of {{Bool 'b -> b mu ! dup}} : {{type tex}}
 
 Functions on Booleans
