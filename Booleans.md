@@ -18,7 +18,7 @@ We can test that $true$ and 'false' have the correct type :
 
   - type of {{true dup}} : {{type}}
   - type of {{false dup}} : {{type}}
-  - type of {{\small Bool 'b -> b mu ! dup}} :
+  - type of {{\small{Bool 'b -> b mu ! dup}}} :
 
 > type "$%l$\n" printf
 
