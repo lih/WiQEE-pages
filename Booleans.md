@@ -20,7 +20,7 @@ We can test that $true$ and 'false' have the correct type :
   - type of {{false dup}} : {{type}}
   - type of {{Bool 'b -> b mu ! dup}} :
 
-> type "$%l$\n" printf ""
+> type "$%l$\n" printf
 
 Functions on Booleans
 ---------------------
