@@ -78,8 +78,8 @@ like the one CaPriCon provides :
 
     To experience this process of exploration, you can install the
     interactive CaPriCon interpreter (for
-    [Linux](downloads/capricon.linux.x86_64.tar.xz) or
-    [OSX](downloads/capricon.osx.x86_64.tar.xz)), that is used to
+    [Linux][capricon-linux] or
+    [OSX][capricon-macos]), that is used to
     power this site. This interpreter can be run as-is, but it is
     usually preferrable to load a *prelude* before any useful
     interaction can occur.
@@ -89,6 +89,9 @@ like the one CaPriCon provides :
     functions, which require you to be much more verbose. The default
     CaPriCon prelude can be found in the above packages, under the
     name "prelude".
+
+[capricon-linux]: downloads/capricon.linux.x86_64.tar.xz
+[capricon-macos]: downloads/capricon.osx.x86_64.tar.xz
 
 If you still aren't quite sure how to go about writing your own
 scripts, [this tutorial](capricon-tutorial.md) may help walk you
