@@ -8,6 +8,6 @@
 > 'Eq Eq_context .Eq ( y ) ? ? "x = y" defconstr
 > 'refl Eq_context .refl ! ! "refl x" defconstr
 
-The type of {{Eq 'e -> e mu ! dup}} is {{type}}.
+The type of {{Eq 'e recursor dup tex}} is {{type tex}}.
 
 > 3 lambdas [ 'Eq 'refl ] export
