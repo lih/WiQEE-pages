@@ -14,7 +14,7 @@ and '.false' hypotheses.
 > 'true Bool_context .true ! ! ! "true"    defconstr 
 > 'false Bool_context .false ! ! ! "false" defconstr
 
-We can test that 'true' and 'false' have the correct type :
+We can test that $true$ and 'false' have the correct type :
 
   - type of {{true dup}} : {{type}}
   - type of {{false dup}} : {{type}}
