@@ -20,3 +20,4 @@ the following context :
 > A 'a -> List 'l -> 'cons List_context .cons ( a l ( .List .cons .nil ) ) ! ! ! "cons a l" defconstr ! !
 > 'nil List_context .nil ! ! ! "nil" defconstr
 
+The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
