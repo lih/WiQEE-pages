@@ -18,7 +18,6 @@ We can test that $true$ and $false$ have the correct type :
 
   - type of {{true dup}} : {{type tex}}
   - type of {{false dup}} : {{type tex}}
-  - type of {{Bool_context .false ! ! ! dup}} : {{type tex}}
   - type of {{Bool 'b recursor dup tex}} : {{type tex}}
 
 Functions on Booleans
@@ -29,6 +28,7 @@ Then, we can start defining first-level combinators, such as 'not', 'and' and 'o
 > 'not Bool 'b -> Bool_context b ( .Bool .false .true ) ! ! ! ! def
 > 'and Bool 'x -> Bool 'y -> Bool_context x ( .Bool y ( .Bool .true .false ) .false ) ! ! ! ! ! def
 > 'or Bool 'x -> Bool 'y -> Bool_context x ( .Bool .true y ( .Bool .true .false ) ) ! ! ! ! ! def
+> 'implies Bool 'x -> Bool 'y -> Bool_context x ( .Bool y ( .Bool .true .false ) .true ) ! ! ! ! ! def
 
 As always, we should verify the type of our combinators, and test
 whether they truly conform to their specification :
