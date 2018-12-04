@@ -34,3 +34,4 @@ As always, we should verify the type of our combinators, and test
 whether they truly conform to their specification :
 
 > [ 'not 'or 'and ] { dup $ type swap "  - $%s : %l$\n" printf } each
+
