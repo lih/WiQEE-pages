@@ -33,5 +33,5 @@ Then, we can start defining first-level combinators, such as 'not', 'and' and 'o
 As always, we should verify the type of our combinators, and test
 whether they truly conform to their specification :
 
-> [ 'not 'or 'and ] { dup $ type swap "  - $%s : %l$\n" printf } each
+> [ 'not 'or 'and 'implies ] { dup $ type swap "  - $%s : %l$\n" printf } each
 
