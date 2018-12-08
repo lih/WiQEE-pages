@@ -268,7 +268,7 @@ Given a combinatorial type (a type without free variables) and an
 associated tag, produce an axiom with that tag, that can serve as a
 proof of the given type.
 
-`axiom` : $tag\ T\ ...\ Axiom_{T,tag}\ ...$
+`axiom` : $tag\ T\ ...\ \rightarrow\ Axiom_{T,tag}\ ...$
 
 Analysing typed terms
 ---------------------
