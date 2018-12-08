@@ -304,7 +304,7 @@ Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
 to the context. Alternately, you can give a second hypothesis name
 $H'$, in which case the new hypothesis will be introduced before $H'$.
 
-`intro` :
+`intro` :  
 $|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
 $|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_H',\Delta \vdash\ ...$  
 
