@@ -271,7 +271,7 @@ $|\ \Gamma \vdash (\lambda (x : T_x). y)\ ...\ \rightarrow\ k_{\lambda}(\Gamma, 
 $|\ \Gamma \vdash (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
 $|\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
 $|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
-$|\ x\ ...\ \rightarrow\ k_{var}("x"\ ...)$  
+$|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
 $|\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ ...)$  
 
 Managing the type context
