@@ -10,4 +10,4 @@
 
 The type of {{Eq 'e recursor dup tex}} is {{type tex}}.
 
-> 3 lambdas [ 'Eq 'refl ] export
+> 2 lambdas [ 'Eq 'refl ] export
