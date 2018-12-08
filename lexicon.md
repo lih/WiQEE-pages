@@ -306,7 +306,7 @@ $H'$, in which case the new hypothesis will be introduced before $H'$.
 
 `intro` :  
 $|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
-$|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_H',\Delta \vdash\ ...$  
+$|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_{H'},\Delta \vdash\ ...$  
 
 ### `extro-lambda` / `extro-forall`
 
