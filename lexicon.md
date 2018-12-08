@@ -298,15 +298,14 @@ code, such as OCaml or Haskell.
 Managing the type context
 -------------------------
 
-### `intro` / `intro-before`
+### `intro`
 
 Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
 to the context.
 
-The second form takes as an additional parameter the name of another
-hypothesis. In that form, the new hypothesis is created *before* the
-other one (and all other subsequent ones), rather than in the last
-position.
+`intro` :
+$|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
+$|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_H',\Delta \vdash\ ...$  
 
 ### `extro-lambda` / `extro-forall`
 
