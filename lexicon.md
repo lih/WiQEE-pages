@@ -262,6 +262,14 @@ the top of the stack, if that term is of an inductive type.
 
 `mu` : $x\ ...\ \rightarrow\ \mu(x)\ ...$
 
+### `axiom`
+
+Given a combinatorial type (a type without free variables) and an
+associated tag, produce an axiom with that tag, that can serve as a
+proof of the given type.
+
+`axiom` : $tag\ T\ ...\ Axiom_{T,tag}\ ...$
+
 Analysing typed terms
 ---------------------
 
