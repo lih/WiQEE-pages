@@ -264,7 +264,12 @@ Computes the type of the term at the top of the stack.
 
 ### `match`
 
-Given a quote for each possible shape, and a term
+Given a quote for each possible shape, and a term, executes the corresponding quote :
+
+`match` : $\Gamma \vdash k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ (\lambda (x : T_x). y)\ ...$  
+$\rightarrow$
+$\Gamma, x : T_x \vdash\ ...\ \rightarrow^{k_{\lambda}}$
+				
 
 Managing the type context
 -------------------------
