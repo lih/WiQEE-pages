@@ -281,13 +281,14 @@ Computes the type of the term at the top of the stack.
 
 Given a quote for each possible shape, and a term, executes the corresponding quote :
 
-$k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{axiom}$ `match` :  
+$k_{Set}\ k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{axiom}$ `match` :  
 $|\ \Gamma \vdash (\lambda (x : T_x). y)\ ...\ \rightarrow\ k_{\lambda}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
 $|\ \Gamma \vdash (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
 $|\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
 $|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
 $|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
 $|\ Axiom_{T,tag}\ ...\ \rightarrow\ k_{axiom}(tag\ T\ \ ...)$  
+$|\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ \ ...)$  
 
 ### `extract`
 
