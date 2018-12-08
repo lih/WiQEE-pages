@@ -245,7 +245,7 @@ Abstracts the last hypothesis in context for the term at the top of
 the stack. That hypothesis is abstracted repectively as a
 lambda-abstraction, or a product.
 
-`lambda` : $\Gamma, h : T_h \vdash x\ ... -> \Gamma \vdash (\lambda (h : T_h). x)\ ...$
+`lambda` : $\Gamma, h : T_h \vdash x\ ... \rightarrow \Gamma \vdash (\lambda (h : T_h). x)\ ...$
 
 ### `mu`
 
