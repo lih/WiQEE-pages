@@ -253,6 +253,8 @@ lambda-abstraction, or a product.
 Produces an inductive projection to a higher universe for the term at
 the top of the stack, if that term is of an inductive type.
 
+`mu` : $x\ ...\ \rightarrow\ \mu(x)\ ...$
+
 Analysing typed terms
 ---------------------
 
