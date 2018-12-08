@@ -268,7 +268,7 @@ Given a quote for each possible shape, and a term, executes the corresponding qu
 
 `match` : $\Gamma \vdash k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ (\lambda (x : T_x). y)\ ...$  
 $\rightarrow$
-$\Gamma, x : T_x \vdash\ ...\ \rightarrow^{k_{\lambda}}$
+$k_{\lambda}(\Gamma, x : T_x \vdash\ ...)$
 				
 
 Managing the type context
