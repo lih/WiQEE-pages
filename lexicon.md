@@ -289,6 +289,12 @@ $|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$
 $|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
 $|\ Axiom_{T,tag}\ ...\ \rightarrow\ k_{axiom}(tag\ T\ \ ...)$  
 
+### `extract`
+
+Extract the term at the top of the stack into an abstract algebraic
+representation, suitable for the production of foreign functional
+code, such as OCaml or Haskell.
+
 Managing the type context
 -------------------------
 
