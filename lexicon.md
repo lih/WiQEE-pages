@@ -270,7 +270,8 @@ Given a quote for each possible shape, and a term, executes the corresponding qu
 `match` : $\Gamma \vdash k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
 `match` : $k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
 `match` : $k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
-
+`match` : $k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ x\ ...\ \rightarrow\ k_{var}("x"\ ...)$  
+`match` : $k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{Set}\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ ...)$  
 
 Managing the type context
 -------------------------
