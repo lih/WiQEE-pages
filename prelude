@@ -12,7 +12,7 @@
   dup dict-keys import-keys 
 } def
 
-[ dict term-index term context io list arith string ] { import } each
+[ dict term-index construction query context io list arith string ] { import } each
 
 'Type { 0 universe } def
 
@@ -35,7 +35,7 @@
 
 'vis { show-context "-------\n" printf show-stack } def
 
-'-> { dup 1 swapn swap intro { {@ dup @} variable } def } def
+'-> { dup 1 swapn swap intro { {@ dup @} variable pull } def } def
 '! 'extro-lambda $ def
 '? 'extro-forall $ def
 

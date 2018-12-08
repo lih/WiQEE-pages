@@ -217,7 +217,7 @@ Examples :
 > 'x_module { 'x 2 def } "x_module.mdc" module def
 > x_module 'x { } { } lookup 'x $ "x = %v; x_module.x = %v" printf
 
-Contructing typed terms
+Constructing typed terms
 -----------------------
 
 ### `universe`
@@ -237,24 +237,34 @@ produces that variable.
 
 Given a function `f`, and a term `x`, produces the term `f x`.
 
+`apply` : $x\ f\ ...\ \rightarrow\ (f\ x)\ ...$
+
 ### `lambda` / `forall`
 
 Abstracts the last hypothesis in context for the term at the top of
 the stack. That hypothesis is abstracted repectively as a
 lambda-abstraction, or a product.
 
+`lambda` : $\Gamma, h : T_h \vdash x\ ... -> \Gamma \vdash (\lambda (h : T_h). x)\ ...$
+
 ### `mu`
 
 Produces an inductive projection to a higher universe for the term at
 the top of the stack, if that term is of an inductive type.
 
-Managing the type context
--------------------------
+Analysing typed terms
+---------------------
 
 ### `type`
 
-Computes the type of the term at the top of the stack, in the current
-context.
+Computes the type of the term at the top of the stack.
+
+### `match`
+
+Given a quote for each possible shape, and a term
+
+Managing the type context
+-------------------------
 
 ### `intro` / `intro-before`
 
