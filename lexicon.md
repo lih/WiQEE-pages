@@ -320,7 +320,7 @@ called.
 Renames a hypothesis. This function takes two parameters : a
 hypothesis name, and the new name to give it.
 
-### `subst`
+### `substitute`
 
 Given a hypothesis name, and a term of the same type as that
 hypothesis, remove that hypothesis from the context by substituting
