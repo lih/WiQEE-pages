@@ -301,7 +301,8 @@ Managing the type context
 ### `intro`
 
 Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
-to the context.
+to the context. Alternately, you can give a second hypothesis name
+$H'$, in which case the new hypothesis will be introduced before $H'$.
 
 `intro` :
 $|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
