@@ -24,6 +24,13 @@ element.
 `swap` : $x\ y\ ...\ \rightarrow\ y\ x\ ...$  
 `swapn` : $n\ x\ y_0 .. y_n\ ...\ \rightarrow\ y_n\ y_0 .. y_{n-1}\ x\ ...$
 
+### `shift` / `shaft`
+
+Shifts the nth element towards the top, or shaft the top to the nth place.
+
+`shift` : $n\ x_1..x_n\ ...\ \rightarrow\ x_n\ x_1..x_{n-1}\ ...$  
+`shaft` : $n\ x_1..x_n\ ...\ \rightarrow\ x_2..x_n\ x_1...$  
+
 ### `pop` / `popn`
 
 Pops the top element, or the nth top element, off the stack.
