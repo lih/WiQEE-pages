@@ -23,10 +23,10 @@ the following context :
 The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
 
 > !
-> 'list_map Type 'A -> Type 'B -> A 'x -> B ? 'f -> list ( A ) 'l ->
+> 'list_map Type 'A -> Type 'B -> A 'x -> B ? 'f -> List ( A ) 'l ->
 >    l (
->      list ( B ) 
->      A 'x -> list ( B ) 'l -> cons ( B f ( x ) l ) ! !
+>      List ( B ) 
+>      A 'x -> List ( B ) 'l -> cons ( B f ( x ) l ) ! !
 >      nil ( B )
 >    ) ! ! ! ! def
 
