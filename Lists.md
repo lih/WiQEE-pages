@@ -21,3 +21,12 @@ the following context :
 > 'nil List_context .nil ! ! ! "nil" defconstr
 
 The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
+
+> !
+> 'list_map Type 'A -> Type 'B -> A 'x -> B ? 'f -> list ( A ) 'l ->
+>    l (
+>      list ( B ) 
+>      A 'x -> list ( B ) 'l -> cons ( B f ( x ) l ) ! !
+>      nil ( B )
+>    ) ! ! ! ! def
+
