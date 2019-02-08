@@ -6,6 +6,9 @@ or sort objects in a sequence. In mathematical disciplines, lists play
 a similar semantic role, allowing us to express sequences of related
 elements.
 
+The elements of a sequence
+--------------------------
+
 The simplest kind of list is either an empty list, or a list
 containing one element, followed by another list. Given a type {{Type
 'A -> A}} of elements, we can define lists of type {{A}} in
@@ -21,8 +24,11 @@ the following context :
 > 'nil List_context .nil ! ! ! "nil" defconstr
 
 The list recursor, {{List 'l recursor dup tex}}, has type {{type
-tex}}. We can also define non-trivial combinators that work on lists,
-such as "map" and "append" :
+tex}}. We can now start to define non-trivial combinators that work on
+lists, such as "map" and "append" :
+
+List combinators
+----------------
 
 > !
 > 'list_map Type 'A -> Type 'B -> A 'x -> B ? 'f -> List ( A ) 'l ->
