@@ -20,7 +20,9 @@ the following context :
 > A 'a -> List 'l -> 'cons List_context .cons ( a l ( .List .cons .nil ) ) ! ! ! "cons a l" defconstr ! !
 > 'nil List_context .nil ! ! ! "nil" defconstr
 
-The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
+The list recursor, {{List 'l recursor dup tex}}, has type {{type
+tex}}. We can also define non-trivial combinators that work on lists,
+such as "map" and "append" :
 
 > !
 > 'list_map Type 'A -> Type 'B -> A 'x -> B ? 'f -> List ( A ) 'l ->
@@ -30,7 +32,11 @@ The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
 >      nil ( B )
 >    ) ! ! ! ! def
 
+list_map has type {{list_map type tex}}.
+
 > 'list_append Type 'A -> List ( A ) dup 'x -> 'y -> x (
 >    List ( A )
 >    cons ( A )
 >    y ) ! ! ! def
+
+list_append has the type {{list_append type tex}}.
