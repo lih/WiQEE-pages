@@ -30,3 +30,7 @@ The list recursor, {{List 'l recursor dup tex}}, has type {{type tex}}
 >      nil ( B )
 >    ) ! ! ! ! def
 
+> 'list_append Type 'A -> List ( A ) dup 'x -> 'y -> x (
+>    List ( A )
+>    cons ( A )
+>    y ) ! ! ! def
