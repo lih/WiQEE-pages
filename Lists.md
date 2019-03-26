@@ -19,6 +19,9 @@ the following context :
 >   A 'a -> .List 'l -> .List ? ? '.cons ->
 >   .List '.nil -> } def
 
+Armed with this context, defining the usual constructors for the List
+type and its members becomes easy : 
+
 > 'List List_context .List ? ? ? "List A" defconstr
 > A 'a -> List 'l -> 'cons List_context
 >     .cons ( a l ( .List .cons .nil ) ) ! ! ! "cons a l" defconstr ! !
