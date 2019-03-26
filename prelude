@@ -53,6 +53,7 @@
 
 'mustache. { show } def
 'tex { 'mustache. { "$%l$\n" printf 'mustache. {@ dup $ @} def } def } def
+'svg { 'mustache. { "<svg xmlns="http://www.w3.org/2000/svg">%g</svg>\n" printf 'mustache. {@ dup $ @} def } def } def
 'raw { 'mustache. { "%s\n" printf 'mustache. {@ dup $ @} def } def } def
 
 'recursor { dup 2 shaft -> variable mu ! } def
