@@ -7,6 +7,6 @@
 > 'zero Nat_context .zero 3 lambdas "0" defconstr
 > Nat 'n -> 'succ Nat_context .succ ( n ( .Nat .zero .succ ) ) 3 lambdas "S n" defconstr !
 
-The `Nat` type is defined to {{Nat svg}}. {{Nat 'n recursor dup svg}} has type {{type svg}}.
+The `Nat` type is defined to {{Nat tex}}. {{Nat 'n recursor dup tex}} has type {{type tex}}.
 
-{{succ dup svg}} has type {{type svg}}.
+{{succ dup tex}} has type {{type tex}}.
