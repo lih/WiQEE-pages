@@ -53,8 +53,7 @@
 
 'mustache. { show } def
 'tex { 'mustache. { "$%l$\n" printf 'mustache. {@ dup $ @} def } def } def
-'svg-style "text { font: normal 100% sans-serif; } .small { font-size: 70%; }" def
-'svg { 'mustache. { svg-style "<svg height=\"2em\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\"><style>%s</style><text x='0' y='1.5em'>%g</text></svg>" printf 'mustache. {@ dup $ @} def } def } def
+'svg { 'mustache. { svg-style "<svg height=\"2em\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\"><text x='0' y='1.5em'>%g</text></svg>" printf 'mustache. {@ dup $ @} def } def } def
 'raw { 'mustache. { "%s\n" printf 'mustache. {@ dup $ @} def } def } def
 
 'recursor { dup 2 shaft -> variable mu ! } def
