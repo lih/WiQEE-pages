@@ -40,7 +40,7 @@ List combinators
 >      List ( B ) 
 >      A 'x -> List ( B ) 'l -> cons ( B f ( x ) l ) ! !
 >      nil ( B )
->    ) ! ! ! ! def
+>    ) 4 lambdas def
 
 list_map has type {{list_map type tex}}.
 
