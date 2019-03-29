@@ -7,11 +7,6 @@
 
 ### Binders and contexts
 
-> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
-> 'funs { swap reverse { swap '! $ binder } each exec } defX
-> 'prods { swap reverse { swap '? $ binder } each exec } defX
-> '# { swap cons } defX
-
 > 'Type { 0 universe } defX
 
 > 'foralls { { extro-forall } swap times } defX
@@ -35,3 +30,9 @@
 > 'defconstr { 1 dupn swap showdef def } defX
 > 
 > 'recursor { dup 2 shaft -> variable mu ! } defX
+
+> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
+> 'funs { swap reverse { swap '! $ binder } each exec } defX
+> 'prods { swap reverse { swap '? $ binder } each exec } defX
+> '# { swap cons } defX
+
