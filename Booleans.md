@@ -10,6 +10,7 @@ First, we define the Boolean context :
 > } def
 > 'bind { $ 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
 > 'funs { swap reverse { swap '! bind } each } def
+> 'Bool-context [ { Type '.Bool } { .Bool '.true } { .Bool '.false } ] def
 > 'make-Bool {
 >    Type '.Bool -> .Bool '.true -> .Bool '.false ->
 >    3 in
