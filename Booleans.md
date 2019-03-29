@@ -8,21 +8,18 @@ First, we define the Boolean context :
 >    { {@ 2 shift @} exec
 >      {@ @} {@ $ @} exec } exec
 > } def
-> 'bind { $ 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
-> 'funs { swap reverse { swap '! bind } each } def
+> 'binder { $ 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
+> 'funs { swap reverse { swap '! binder } each exec } def
+> 'prods { swap reverse { swap '! binder } each exec } def
 > 'Bool-context [ { Type '.Bool } { .Bool '.true } { .Bool '.false } ] def
-> 'make-Bool {
->    Type '.Bool -> .Bool '.true -> .Bool '.false ->
->    3 in
-> } def
 
 In this context, the type of booleans is simply the .Bool type in
 context, and the 'true' and 'false' values are respectively the '.true'
 and '.false' hypotheses.
 
-> 'Bool { .Bool } 'foralls make-Bool "Boolean" defconstr
-> 'true { .true } 'lambdas make-Bool "true"    defconstr 
-> 'false { .false } 'lambdas make-Bool "false" defconstr
+> 'Bool Bool-context { .Bool } 'prods  "Boolean" defconstr
+> 'true Bool-context { .true } 'funs   "true"    defconstr 
+> 'false Bool-context { .false } 'funs "false"   defconstr
 
 We can test that $true$ and $false$ have the correct type :
 
