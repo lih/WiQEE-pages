@@ -55,6 +55,6 @@
 'recursor { dup 2 shaft -> variable mu ! } def
 
 'collect { { 'exports empty def {@ @} exec exports {@ vocabulary @} set-vocabulary } exec } def
-'module { dup source swap "%s.mdc" format redirect } def
-'require { { {@ dup @} { module } collect } swap "%s.mdo" format cache } def
+'module { dup source swap output-dir "%s%s.mdc" format redirect } def
+'require { { {@ dup @} { module } collect } swap cache-dir "%s%s.mdo" format cache } def
 
