@@ -44,7 +44,7 @@
   cache-dir "%s/%s.mdc" format module
   dup 'exports { import-keys } { pop } lookup
 } def
-'export { 'exports swap def } def
+'export { exports swap { dup $ insert } each 'exports swap def } def
 
 '( '[ $ def
 ') { ] applyl } def
@@ -60,5 +60,5 @@
 
 'recursor { dup 2 shaft -> variable mu ! } def
 
-'collect { { {@ @} exec vocabulary 'exports get {@ vocabulary @} set-vocabulary } exec } def
+'collect { { 'exports empty def {@ @} exec exports {@ vocabulary @} set-vocabulary } exec } def
  

@@ -79,10 +79,17 @@ in the current environment.
 
 `$` : $name\ ...\ \rightarrow\ \$name\ ...$
 
+### `vocabulary` / `set-vocabulary`
+
+Pushes the active dictionary, that contains all defined variables, on
+top of the stack. In the second case, make the top of the stack the
+current dictionary, redefining all variables at once.
+
 ### `lookup`
 
 A more flexible version of `$`, where the environment is specified
-explicitly as a second argument.
+explicitly as a second argument (for example, from calling
+`vocabulary`).
 
 First-class functions
 ---------------------
@@ -190,11 +197,6 @@ String-Indexed Dictionaries
 
 Pushes the empty dictionary onto the stack.
 
-### `vocabulary`
-
-Pushes the active dictionary, that contains all defined variables, on
-top of the stack.
-
 ### `insert`
 
 Given a dictionary `d`, a key `k` and a value `v`, inserts the value `v` at
@@ -210,19 +212,6 @@ for `k`.
 
 Given a dictionary `d`, pushes a list of all of `d`'s keys onto the
 stack.
-
-### `module`
-
-Given an executable function, and an output file name, produces a
-dictionary that is the result of running that function in the current
-environment, while saving the result of that execution in the
-specified file.
-
-Examples :
-
-> 'x 1 def
-> 'x_module { 'x 2 def } "x_module.mdc" module def
-> x_module 'x { } { } lookup 'x $ "x = %v; x_module.x = %v" printf
 
 Constructing typed terms
 -----------------------
