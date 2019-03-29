@@ -17,9 +17,9 @@ In this context, the type of booleans is simply the .Bool type in
 context, and the 'true' and 'false' values are respectively the '.true'
 and '.false' hypotheses.
 
-> 'Bool Bool-context { .Bool } 'prods  "Boolean" defconstr
-> 'true Bool-context { .true } 'funs   "true"    defconstr 
-> 'false Bool-context { .false } 'funs "false"   defconstr
+> 'Bool Bool-context { .Bool } prods  "Boolean" defconstr
+> 'true Bool-context { .true } funs   "true"    defconstr 
+> 'false Bool-context { .false } funs "false"   defconstr
 
 We can test that $true$ and $false$ have the correct type :
 
