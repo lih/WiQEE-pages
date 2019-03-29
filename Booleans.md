@@ -1,10 +1,10 @@
 % Booleans, the original true-false dichotomy
 % Marc Coiffier
 
+> 'utils require import
+
 Booleans can have two values, in any given universe.
 First, we define the Boolean context :
-
-> 'utils require import
 
 > 'Bool-context [ { Type '.Bool } { .Bool '.true } { .Bool '.false } ] def
 
