@@ -190,6 +190,11 @@ Given a resource name and a quote, does one of two things :
 After the builtin has run, the contents of the requested object can be
 found at the top of the stack.
 
+### `redirect`
+
+Given a resource name and a quote, executes the quote, redirecting
+its output to the resource.
+
 String-Indexed Dictionaries
 ---------------------------
 
