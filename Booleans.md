@@ -11,6 +11,7 @@ First, we define the Boolean context :
 > 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
 > 'funs { swap reverse { swap '! $ binder } each exec } def
 > 'prods { swap reverse { swap '? $ binder } each exec } def
+> '# { swap cons } def
 > 'Bool-context [ { Type '.Bool } { .Bool '.true } { .Bool '.false } ] def
 
 In this context, the type of booleans is simply the .Bool type in
@@ -32,7 +33,7 @@ Functions on Booleans
 
 Then, we can start defining first-level combinators, such as 'not', 'and' and 'or' :
 
-> 'not { Bool 'b } Bool-context swap cons { b ( .Bool .false .true ) } funs def
+> 'not { Bool 'b } Bool-context # { b ( .Bool .false .true ) } funs def
 > 'and Bool 'x -> Bool 'y ->
 >   { x ( .Bool y ( .Bool .true .false ) .false ) } 'lambdas make-Bool
 >   ! ! def
