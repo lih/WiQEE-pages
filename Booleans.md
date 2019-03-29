@@ -10,7 +10,7 @@ First, we define the Boolean context :
 > } def
 > 'binder { $ 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
 > 'funs { swap reverse { swap '! binder } each exec } def
-> 'prods { swap reverse { swap '! binder } each exec } def
+> 'prods { swap reverse { swap '? binder } each exec } def
 > 'Bool-context [ { Type '.Bool } { .Bool '.true } { .Bool '.false } ] def
 
 In this context, the type of booleans is simply the .Bool type in
