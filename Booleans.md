@@ -30,7 +30,7 @@ Functions on Booleans
 Then, we can start defining first-level combinators, such as 'not', 'and' and 'or' :
 
 > 'not Bool 'b -> { b ( .Bool .false .true ) } 'lambdas Bool_context ! def
-> 'and Bool 'x -> Bool 'y -> Bool_context x ( .Bool y ( .Bool .true .false ) .false ) ! ! ! ! ! def
+> 'and Bool 'x -> Bool 'y -> { x ( .Bool y ( .Bool .true .false ) .false ) } ! ! def
 > 'or Bool 'x -> Bool 'y -> Bool_context x ( .Bool .true y ( .Bool .true .false ) ) ! ! ! ! ! def
 > 'implies Bool 'x -> Bool 'y -> Bool_context x ( .Bool y ( .Bool .true .false ) .true ) ! ! ! ! ! def
 
