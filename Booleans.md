@@ -32,7 +32,7 @@ Functions on Booleans
 
 Then, we can start defining first-level combinators, such as 'not', 'and' and 'or' :
 
-> 'not Bool 'b -> { b ( .Bool .false .true ) } 'lambdas make-Bool ! def
+> 'not { Bool 'b } Bool-context swap cons { b ( .Bool .false .true ) } funs def
 > 'and Bool 'x -> Bool 'y ->
 >   { x ( .Bool y ( .Bool .true .false ) .false ) } 'lambdas make-Bool
 >   ! ! def
