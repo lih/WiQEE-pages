@@ -9,7 +9,7 @@ First, we define the Boolean context :
 >      {@ @} {@ $ @} exec } exec
 > } def
 > 'bind { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
-> 'funs { swap reverse { swap '! fun } each } def
+> 'funs { swap reverse { swap '! bind } each } def
 > 'make-Bool {
 >    Type '.Bool -> .Bool '.true -> .Bool '.false ->
 >    3 in
