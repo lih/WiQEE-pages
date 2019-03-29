@@ -4,7 +4,7 @@
 Booleans can have two values, in any given universe.
 First, we define the Boolean context :
 
-> 'Bool_context {
+> 'make-Bool {
 >   'close swap $ def
 >    Type '.Bool -> .Bool '.true -> .Bool '.false ->
 >    exec 3 close
@@ -14,9 +14,9 @@ In this context, the type of booleans is simply the .Bool type in
 context, and the 'true' and 'false' values are respectively the '.true'
 and '.false' hypotheses.
 
-> 'Bool { .Bool } 'foralls Bool_context "Boolean" defconstr
-> 'true { .true } 'lambdas Bool_context "true"    defconstr 
-> 'false { .false } 'lambdas Bool_context "false" defconstr
+> 'Bool { .Bool } 'foralls make-Bool "Boolean" defconstr
+> 'true { .true } 'lambdas make-Bool "true"    defconstr 
+> 'false { .false } 'lambdas make-Bool "false" defconstr
 
 We can test that $true$ and $false$ have the correct type :
 
@@ -29,15 +29,15 @@ Functions on Booleans
 
 Then, we can start defining first-level combinators, such as 'not', 'and' and 'or' :
 
-> 'not Bool 'b -> { b ( .Bool .false .true ) } 'lambdas Bool_context ! def
+> 'not Bool 'b -> { b ( .Bool .false .true ) } 'lambdas make-Bool ! def
 > 'and Bool 'x -> Bool 'y ->
->   { x ( .Bool y ( .Bool .true .false ) .false ) } 'lambdas Bool_context
+>   { x ( .Bool y ( .Bool .true .false ) .false ) } 'lambdas make-Bool
 >   ! ! def
 > 'or Bool 'x -> Bool 'y ->
->   { x ( .Bool .true y ( .Bool .true .false ) ) } 'lambdas Bool_context
+>   { x ( .Bool .true y ( .Bool .true .false ) ) } 'lambdas make-Bool
 >   ! ! def
 > 'implies Bool 'x -> Bool 'y ->
->   { x ( .Bool y ( .Bool .true .false ) .true ) } 'lambdas Bool_context
+>   { x ( .Bool y ( .Bool .true .false ) .true ) } 'lambdas make-Bool
 >   ! ! def
 
 As always, we should verify the type of our combinators, and test
