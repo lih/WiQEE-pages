@@ -1,35 +1,37 @@
 % Miscellaneous utilities
 % Marc Coiffier
 
+### Exporting definitions
+
+> 'defX { 1 dupn swap def export }
+
 ### Binders and contexts
 
-> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
-> 'funs { swap reverse { swap '! $ binder } each exec } def
-> 'prods { swap reverse { swap '? $ binder } each exec } def
-> '# { swap cons } def
+> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
+> 'funs { swap reverse { swap '! $ binder } each exec } defX
+> 'prods { swap reverse { swap '? $ binder } each exec } defX
+> '# { swap cons } defX
 
-> [ 'binder 'funs 'prods '# ] export
+> 'Type { 0 universe } defX
 
-> 'Type { 0 universe } def
+> 'foralls { { extro-forall } swap times } defX
+> 'lambdas { { extro-lambda } swap times } defX
+> 'applys { range { pop apply } each } defX
+> 'applyl { { swap apply } each } defX
 > 
-> 'foralls { { extro-forall } swap times } def
-> 'lambdas { { extro-lambda } swap times } def
-> 'applys { range { pop apply } each } def
-> 'applyl { { swap apply } each } def
+> 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } defX
 > 
-> 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } def
+> 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } defX
 > 
-> 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } def
+> 'vis { show-context "-------\n" printf show-stack } defX
 > 
-> 'vis { show-context "-------\n" printf show-stack } def
+> '-> { dup 1 swapn swap intro { {@ dup @} variable pull } def } defX
+> '! 'extro-lambda $ defX
+> '? 'extro-forall $ defX
 > 
-> '-> { dup 1 swapn swap intro { {@ dup @} variable pull } def } def
-> '! 'extro-lambda $ def
-> '? 'extro-forall $ def
+> '( '[ $ defX
+> ') { ] applyl } defX
 > 
-> '( '[ $ def
-> ') { ] applyl } def
+> 'defconstr { 1 dupn swap showdef def } defX
 > 
-> 'defconstr { 1 dupn swap showdef def } def
-> 
-> 'recursor { dup 2 shaft -> variable mu ! } def
+> 'recursor { dup 2 shaft -> variable mu ! } defX
