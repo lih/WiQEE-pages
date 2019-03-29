@@ -4,10 +4,6 @@
 Booleans can have two values, in any given universe.
 First, we define the Boolean context :
 
-> 'in {
->    { {@ 2 shift @} exec
->      {@ @} {@ $ @} exec } exec
-> } def
 > 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } def
 > 'funs { swap reverse { swap '! $ binder } each exec } def
 > 'prods { swap reverse { swap '? $ binder } each exec } def
