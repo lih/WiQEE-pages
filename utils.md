@@ -7,3 +7,5 @@
 > 'funs { swap reverse { swap '! $ binder } each exec } def
 > 'prods { swap reverse { swap '? $ binder } each exec } def
 > '# { swap cons } def
+
+> [ 'binder 'funs 'prods '# ] export
