@@ -4,9 +4,13 @@
 Booleans can have two values, in any given universe.
 First, we define the Boolean context :
 
+> 'in {
+>    { {@ 2 shift @} exec
+>      {@ @} {@ $ @} exec } exec
+> } def
 > 'make-Bool {
 >    Type '.Bool -> .Bool '.true -> .Bool '.false ->
->    { {@ swap @} exec 3 {@ $ @} exec } exec
+>    3 in
 > } def
 
 In this context, the type of booleans is simply the .Bool type in
