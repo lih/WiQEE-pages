@@ -4,7 +4,11 @@
 Booleans can have two values, in any given universe.
 First, we define the Boolean context :
 
-> 'Bool_context { 'close 2 shift $ def Type '.Bool -> .Bool '.true -> .Bool '.false -> exec 3 close } def
+> 'Bool_context {
+>   'close 2 shift $ def
+>    Type '.Bool -> .Bool '.true -> .Bool '.false ->
+>    exec 3 close
+> } def
 
 In this context, the type of booleans is simply the .Bool type in
 context, and the 'true' and 'false' values are respectively the '.true'
