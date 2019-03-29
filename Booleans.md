@@ -5,7 +5,7 @@ Booleans can have two values, in any given universe.
 First, we define the Boolean context :
 
 > 'Bool_context {
->   'close 2 shift $ def
+>   'close swap $ def
 >    Type '.Bool -> .Bool '.true -> .Bool '.false ->
 >    exec 3 close
 > } def
@@ -14,9 +14,9 @@ In this context, the type of booleans is simply the .Bool type in
 context, and the 'true' and 'false' values are respectively the '.true'
 and '.false' hypotheses.
 
-> 'Bool Bool_context .Bool ? ? ? "Boolean" defconstr
-> 'true Bool_context .true ! ! ! "true"    defconstr 
-> 'false Bool_context .false ! ! ! "false" defconstr
+> 'Bool { .Bool } 'foralls Bool_context "Boolean" defconstr
+> 'true { .true } 'lambdas Bool_context "true"    defconstr 
+> 'false { .false } 'lambdas Bool_context "false" defconstr
 
 We can test that $true$ and $false$ have the correct type :
 
