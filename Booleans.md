@@ -36,12 +36,10 @@ Then, we can start defining first-level combinators, such as 'not', 'and' and 'o
 > 'not { Bool 'b } Bool-context # { b ( .Bool .false .true ) } funs def
 > 'and { Bool 'x } { Bool 'y } Bool-context # #
 >   { x ( .Bool y ( .Bool .true .false ) .false ) } funs def
-> 'or Bool 'x -> Bool 'y ->
->   { x ( .Bool .true y ( .Bool .true .false ) ) } 'lambdas make-Bool
->   ! ! def
-> 'implies Bool 'x -> Bool 'y ->
->   { x ( .Bool y ( .Bool .true .false ) .true ) } 'lambdas make-Bool
->   ! ! def
+> 'or { Bool 'x } { Bool 'y } Bool-context # #
+>   { x ( .Bool .true y ( .Bool .true .false ) ) } funs def
+> 'implies { Bool 'x } { Bool 'y } Bool-context # #
+>   { x ( .Bool y ( .Bool .true .false ) .true ) } funs def
 
 As always, we should verify the type of our combinators, and test
 whether they truly conform to their specification :
