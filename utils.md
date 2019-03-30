@@ -40,5 +40,3 @@
 ### Defining inductive constructors
 
 > 'defconstr { 1 dupn swap showdef def } defX
-
-
