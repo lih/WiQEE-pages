@@ -1,6 +1,8 @@
 % Encoding Structural Equality in CaPriCon
 % Marc Coiffier
 
+> 'utils require import
+
 > Type 'A -> A 'x -> 
 > 
 > 'Eq_context { A 'a -> Type ? '.Eq -> .Eq ( x ) '.refl -> } def
