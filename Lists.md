@@ -1,6 +1,8 @@
 % Lists : a general sequence of elements
 % Marc Coiffier
 
+> 'utils require import
+
 Sometimes in life, we want to do a series of tasks in a certain order,
 or sort objects in a sequence. In mathematical disciplines, lists play
 a similar semantic role, allowing us to express sequences of related
