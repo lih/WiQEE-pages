@@ -12,4 +12,4 @@
 
 The type of {{A 'y -> Eq ( y ) 'e recursor dup ! tex}} is {{type tex}}.
 
-> 2 lambdas [ 'Eq 'refl ] export
+> 2 lambdas [ 'Eq 'refl ] { export } each
