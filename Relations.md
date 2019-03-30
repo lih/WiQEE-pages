@@ -1,6 +1,8 @@
 % Binary relations
 % Marc Coiffier
 
+> 'utils require import
+
 Given two types {{Type 'A -> A}} and {{Type 'B -> B}}, a binary
 relation between {{A}} and {{B}} can be described as a function that,
 when given two witnesses {{A 'a -> a}} and {{B 'b -> b}} produces a
