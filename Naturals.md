@@ -1,6 +1,8 @@
 % Natural Numbers, or the best way to enumerate anything
 % Marc Coiffier
 
+> 'utils require import
+
 > 'Nat_context { Type '.Nat -> .Nat '.zero -> .Nat 'n -> .Nat ? '.succ -> } def
 
 > 'Nat Nat_context .Nat 3 foralls "Natural" defconstr
