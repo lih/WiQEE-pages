@@ -30,7 +30,6 @@
 
 > 'defconstr { 1 dupn swap showdef def } defX
 
-
 > 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
 > 'funs { swap reverse { swap '! $ binder } each exec } defX
 > 'prods { swap reverse { swap '? $ binder } each exec } defX
