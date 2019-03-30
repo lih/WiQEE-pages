@@ -7,6 +7,13 @@
 
 ### Binders and contexts
 
+> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
+> 'funs { swap reverse { swap '! $ binder } each exec } defX
+> 'prods { swap reverse { swap '? $ binder } each exec } defX
+> '# { swap cons } defX
+
+### Constructing typed terms
+
 > 'Type { 0 universe } defX
 
 > 'foralls { { extro-forall } swap times } defX
@@ -15,23 +22,23 @@
 > 'applyl { { swap apply } each } defX
 > 'recursor { dup 2 shaft -> variable mu ! } defX
 
+> '( '[ $ defX
+> ') { ] applyl } defX
+
+### Navigating the environment
+
 > 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } defX
-
 > 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } defX
-
 > 'vis { show-context "-------\n" printf show-stack } defX
+
+### Managing the type environment
 
 > '-> { dup 1 swapn swap intro { {@ dup @} variable pull } def } defX
 > '! 'extro-lambda $ defX
 > '? 'extro-forall $ defX
 
-> '( '[ $ defX
-> ') { ] applyl } defX
+### Defining inductive constructors
 
 > 'defconstr { 1 dupn swap showdef def } defX
 
-> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
-> 'funs { swap reverse { swap '! $ binder } each exec } defX
-> 'prods { swap reverse { swap '? $ binder } each exec } defX
-> '# { swap cons } defX
 
