@@ -26,7 +26,7 @@
 'raw { 'mustache. { "%s\n" printf 'mustache. {@ dup $ @} def } def } def
 
 'collect { { 'exports empty def {@ @} exec exports {@ vocabulary @} set-vocabulary } exec } def
-'exports { exports swap { dup $ insert } each 'exports swap def } def
+'exports empty def
 'export { exports swap dup $ insert 'exports swap def } def
 
 [ 'source-dir 'output-dir 'cache-dir ] { "" def } each
