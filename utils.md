@@ -3,7 +3,7 @@
 
 ### Exporting definitions
 
-> 'defX { 1 dupn swap def export } def
+> 'defX { 1 dupn swap def export } def 'defX export
 
 ### Binders and contexts
 
