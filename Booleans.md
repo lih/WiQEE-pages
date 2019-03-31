@@ -15,6 +15,7 @@ and '.false' hypotheses.
 > 'Bool Bool-context { .Bool } prods  "Boolean" defconstr
 > 'true Bool-context { .true } funs   "true"    defconstr 
 > 'false Bool-context { .false } funs "false"   defconstr
+> [ 'Bool 'true 'false ] { export } each
 
 We can test that $true$ and $false$ have the correct type :
 
