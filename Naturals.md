@@ -3,11 +3,11 @@
 
 > 'utils require import
 
-> 'Nat_context { Type '.Nat -> .Nat '.zero -> .Nat 'n -> .Nat ? '.succ -> } def
+> 'Nat_context [ { Type '.Nat } { .Nat '.zero } { .Nat 'n -> .Nat ? '.succ } ] def
 
-> 'Nat Nat_context .Nat 3 foralls "Natural" defconstr
-> 'zero Nat_context .zero 3 lambdas "0" defconstr
-> Nat 'n -> 'succ Nat_context .succ ( n ( .Nat .zero .succ ) ) 3 lambdas "S n" defconstr !
+> 'Nat Nat_context { .Nat } prods "Natural" defconstr
+> 'zero Nat_context { .zero } funs "0" defconstr
+> [ { Nat 'n } ] 'succ Nat_context { .succ ( n ( .Nat .zero .succ ) ) } funs "S n" defconstr { } funs
 
 The `Nat` type is defined to {{Nat svg}}. {{Nat 'n recursor dup svg}} has type {{type svg}}.
 
