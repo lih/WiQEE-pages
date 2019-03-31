@@ -28,6 +28,7 @@ type and its members becomes easy :
 > A 'a -> List 'l -> 'cons List_context
 >     .cons ( a l ( .List .cons .nil ) ) ! ! ! "cons a l" defconstr ! !
 > 'nil List_context .nil ! ! ! "nil" defconstr
+> [ 'List 'nil 'cons ] { export } each
 
 The list recursor, {{List 'l recursor dup tex}}, has type {{type
 tex}}. We can now start to define non-trivial combinators that work on
