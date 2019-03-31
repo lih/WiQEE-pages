@@ -7,7 +7,7 @@
 
 > 'Nat Nat_context { .Nat } prods "Natural" defconstr
 > 'zero Nat_context { .zero } funs "0" defconstr
-> [ { Nat 'n } ] 'succ Nat_context { .succ ( n ( .Nat .zero .succ ) ) } funs "S n" defconstr { } funs
+> Nat 'n -> 'succ Nat_context { .succ ( n ( .Nat .zero .succ ) ) } funs "S n" defconstr !
 
 The `Nat` type is defined to {{Nat svg}}. {{Nat 'n recursor dup svg}} has type {{type svg}}.
 
