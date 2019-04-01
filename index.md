@@ -127,7 +127,7 @@ discovered.
 #### Talk is cheap, show me the code
 
 From the previous overview, $\mu$ may seem quite complex, but it is
-actually implemented as an almost linear operation on De Bruijin
+actually implemented as an almost linear operation on De Bruijn
 indices. You can look at [CaPriCon's Haskell
 implementation](https://github.com/lih/stack-libs/blob/master/capricon/src/Data/CaPriCon.hs)
 of this model to convince yourself of that. All in all, the whole
