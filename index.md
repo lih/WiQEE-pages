@@ -97,12 +97,11 @@ through the first hurdles.
 Proofs With Prismatic Constructions
 ===================================
 
-While Markdown+CaPriCon is a decent documentation format (mainly
-thanks to Markdown), it was first designed as an interactive interface
-for the construction of proof terms, described in the Calculus of
-Prismatic Constructions (hence the name CaPriCon), which is an
-extension of the basic CoC with a lifting operator for naturally
-inductive values.
+While CaPriCon can be a decent addition to a documentation format, it
+was first designed as an interactive interface for the construction of
+proof terms, described in the Calculus of Prismatic Constructions
+(hence the name CaPriCon), which is an extension of the basic CoC with
+a lifting operator for naturally inductive values.
 
 That operator is called $\mu$, and it works by projecting inductive
 values onto a larger version of themselves, universe-wise. For
