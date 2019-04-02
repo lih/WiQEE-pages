@@ -5,6 +5,12 @@
 
 > 'defX { 1 dupn swap def export } def 'defX export
 
+### Navigating the environment
+
+> 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } defX
+> 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } defX
+> 'vis { show-context "-------\n" printf show-stack } defX
+
 ### Binders and contexts
 
 > 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
@@ -24,12 +30,6 @@
 
 > '( '[ $ defX
 > ') { ] applyl } defX
-
-### Navigating the environment
-
-> 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } defX
-> 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } defX
-> 'vis { show-context "-------\n" printf show-stack } defX
 
 ### Managing the type environment
 
