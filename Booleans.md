@@ -36,7 +36,7 @@ Then, we can start defining first-level combinators, such as 'not', 'and' and 'o
 >   { x ( .Bool .true y ( .Bool .true .false ) ) } funs def
 > 'implies { Bool 'x } { Bool 'y } Bool-context # #
 >   { x ( .Bool y ( .Bool .true .false ) .true ) } funs def
->? [ true false ] { [ true false ] { {@ 1 dupn dup @} dup {@ and apply @} apply 2 shaft "and(%v,%v) = %v\n" printf } each } each
+>? [ true false ] { dup and apply [ true false ] { 1 dupn apply swap 3 dupn "and(%v,%v) = %v\n" printf } each } each
 
 As always, we should verify the type of our combinators, and test
 whether they truly conform to their specification :
