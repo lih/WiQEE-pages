@@ -21,16 +21,15 @@
 'reverse { [ ] swap { cons } each } def
 
 'mustache. { show } def
-'tex { 'mustache. { "$%l$\n" printf 'mustache. {@ dup $ @} def } def } def
-'svg { 'mustache. { "<svg class='formula' width='150px' height='2em' viewBox='0 0 100 100' xmlns=\"http://www.w3.org/2000/svg\"><text class='formula-text' x='0' y='100'>%g</text></svg>" printf 'mustache. {@ dup $ @} def } def } def
-'raw { 'mustache. { "%s\n" printf 'mustache. {@ dup $ @} def } def } def
+'tex { 'mustache. { "$%l$\n" printf 'mustache. ,{ dup $ } def } def } def
+'svg { 'mustache. { "<svg class='formula' width='150px' height='2em' viewBox='0 0 100 100' xmlns=\"http://www.w3.org/2000/svg\"><text class='formula-text' x='0' y='100'>%g</text></svg>" printf 'mustache. ,{ dup $ } def } def } def
+'raw { 'mustache. { "%s\n" printf 'mustache. ,{ dup $ } def } def } def
 
-'collect { { 'exports empty def {@ @} exec exports {@ vocabulary @} set-vocabulary } exec } def
+'collect { { 'exports empty def ,{ } exec exports ,{ vocabulary } set-vocabulary } exec } def
 'exports empty def
 'export { exports swap dup $ insert 'exports swap def } def
 
 [ 'source-dir 'output-dir 'cache-dir ] { "" def } each
 
 'module { dup source-dir "%s%s" format source swap output-dir "%s%s.mdc" format redirect } def
-'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { {@ dup @} { module } collect } swap cache-dir "%s%s.mdo" format cache } def
-
+'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def

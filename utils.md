@@ -15,7 +15,7 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 
 ### Binders and contexts
 
-> 'binder { 2 shaft { {@ swap @} exec -> {@ @} exec {@ @} exec } } defX
+> 'binder { 2 shaft { ,{ swap } exec -> ,{ } exec ,{ } exec } } defX
 > 'funs { swap reverse { swap '! $ binder } each exec } defX
 > 'prods { swap reverse { swap '? $ binder } each exec } defX
 > '# { swap cons } defX
@@ -35,7 +35,7 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 
 ### Managing the type environment
 
-> '-> { dup 1 swapn swap intro { {@ dup @} variable pull } def } defX
+> '-> { dup 1 swapn swap intro { ,{ dup } variable pull } def } defX
 > '! 'extro-lambda $ defX
 > '? 'extro-forall $ defX
 
