@@ -1,6 +1,8 @@
 % Miscellaneous utilities
 % Marc Coiffier
 
+A reminder : all builtin functions can be found documented [here](lexicon.html)
+
 ### Exporting definitions
 
 > 'defX { 1 dupn swap def export } def 'defX export
