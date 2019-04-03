@@ -48,6 +48,6 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 > 'in-list {
 >   swap {
 >     ,{ } set-stack ${ }
->     { ,{ ,{ stack } } set-stack pop pop ,{ } } exec
+>     { ,{ ,{ stack } } set-stack pop pop ,{ stack } } exec
 >   } exec
 > } defX
