@@ -42,3 +42,7 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 ### Defining inductive constructors
 
 > 'defconstr { 1 dupn swap showdef def } defX
+
+### Acting on list stacks
+
+> 'in-list { { ,{ } set-stack ${ } { ,{ ,{ stack } } set-stack pop pop ,{ } } exec } exec } defX
