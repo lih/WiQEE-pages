@@ -24,6 +24,13 @@ element.
 `swap` : $x\ y\ ...\ \rightarrow\ y\ x\ ...$  
 `swapn` : $n\ x\ y_0 .. y_n\ ...\ \rightarrow\ y_n\ y_0 .. y_{n-1}\ x\ ...$
 
+### `shift` / `shaft`
+
+Shifts the nth element towards the top, or shaft the top to the nth place.
+
+`shift` : $n\ x_1..x_n\ ...\ \rightarrow\ x_n\ x_1..x_{n-1}\ ...$  
+`shaft` : $n\ x_1..x_n\ ...\ \rightarrow\ x_2..x_n\ x_1...$  
+
 ### `pop` / `popn`
 
 Pops the top element, or the nth top element, off the stack.
@@ -72,10 +79,17 @@ in the current environment.
 
 `$` : $name\ ...\ \rightarrow\ \$name\ ...$
 
+### `vocabulary` / `set-vocabulary`
+
+Pushes the active dictionary, that contains all defined variables, on
+top of the stack. In the second case, make the top of the stack the
+current dictionary, redefining all variables at once.
+
 ### `lookup`
 
 A more flexible version of `$`, where the environment is specified
-explicitly as a second argument.
+explicitly as a second argument (for example, from calling
+`vocabulary`).
 
 First-class functions
 ---------------------
@@ -176,17 +190,17 @@ Given a resource name and a quote, does one of two things :
 After the builtin has run, the contents of the requested object can be
 found at the top of the stack.
 
+### `redirect`
+
+Given a resource name and a quote, executes the quote, redirecting
+its output to the resource.
+
 String-Indexed Dictionaries
 ---------------------------
 
 ### `empty`
 
 Pushes the empty dictionary onto the stack.
-
-### `vocabulary`
-
-Pushes the active dictionary, that contains all defined variables, on
-top of the stack.
 
 ### `insert`
 
@@ -204,20 +218,7 @@ for `k`.
 Given a dictionary `d`, pushes a list of all of `d`'s keys onto the
 stack.
 
-### `module`
-
-Given an executable function, and an output file name, produces a
-dictionary that is the result of running that function in the current
-environment, while saving the result of that execution in the
-specified file.
-
-Examples :
-
-> 'x 1 def
-> 'x_module { 'x 2 def } "x_module.mdc" module def
-> x_module 'x { } { } lookup 'x $ "x = %v; x_module.x = %v" printf
-
-Contructing typed terms
+Constructing typed terms
 -----------------------
 
 ### `universe`
@@ -237,34 +238,70 @@ produces that variable.
 
 Given a function `f`, and a term `x`, produces the term `f x`.
 
+`apply` : $x\ f\ ...\ \rightarrow\ (f\ x)\ ...$
+
 ### `lambda` / `forall`
 
 Abstracts the last hypothesis in context for the term at the top of
 the stack. That hypothesis is abstracted repectively as a
 lambda-abstraction, or a product.
 
+`lambda` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\lambda (h : T_h). x))\ ...$  
+`forall` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\forall (h : T_h), x))\ ...$
+
 ### `mu`
 
 Produces an inductive projection to a higher universe for the term at
 the top of the stack, if that term is of an inductive type.
 
-Managing the type context
--------------------------
+`mu` : $x\ ...\ \rightarrow\ \mu(x)\ ...$
+
+### `axiom`
+
+Given a combinatorial type (a type without free variables) and an
+associated tag, produce an axiom with that tag, that can serve as a
+proof of the given type.
+
+`axiom` : $tag\ T\ ...\ \rightarrow\ Axiom_{T,tag}\ ...$
+
+Analysing typed terms
+---------------------
 
 ### `type`
 
-Computes the type of the term at the top of the stack, in the current
-context.
+Computes the type of the term at the top of the stack.
 
-### `intro` / `intro-before`
+### `match`
+
+Given a quote for each possible shape, and a term, executes the corresponding quote :
+
+$k_{Set}\ k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{axiom}$ `match` :  
+$|\ \Gamma \vdash (\lambda (x : T_x). y)\ ...\ \rightarrow\ k_{\lambda}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
+$|\ \Gamma \vdash (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
+$|\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
+$|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
+$|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
+$|\ Axiom_{T,tag}\ ...\ \rightarrow\ k_{axiom}(tag\ T\ \ ...)$  
+$|\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ \ ...)$  
+
+### `extract`
+
+Extract the term at the top of the stack into an abstract algebraic
+representation, suitable for the production of foreign functional
+code, such as OCaml or Haskell.
+
+Managing the type context
+-------------------------
+
+### `intro`
 
 Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
-to the context.
+to the context. Alternately, you can give a second hypothesis name
+$H'$, in which case the new hypothesis will be introduced before $H'$.
 
-The second form takes as an additional parameter the name of another
-hypothesis. In that form, the new hypothesis is created *before* the
-other one (and all other subsequent ones), rather than in the last
-position.
+`intro` :  
+$|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
+$|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_{H'},\Delta \vdash\ ...$  
 
 ### `extro-lambda` / `extro-forall`
 
@@ -278,7 +315,7 @@ called.
 Renames a hypothesis. This function takes two parameters : a
 hypothesis name, and the new name to give it.
 
-### `subst`
+### `substitute`
 
 Given a hypothesis name, and a term of the same type as that
 hypothesis, remove that hypothesis from the context by substituting
