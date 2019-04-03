@@ -51,5 +51,5 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 >     { ,{ ,{ stack } } set-stack pop pop ,{ stack } } exec
 >   } exec
 > } defX
->? 'x 'y [ 1 2 3 4 ] { swap } in-list vis
+>? [ 1 2 3 4 ] { swap } in-list vis
 >? [ 'a 'b 'c ] { 2 shift pop } in-list vis
