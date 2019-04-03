@@ -57,3 +57,4 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 > } defX
 >? [ 1 2 3 4 ] { swap } in-list vis
 >? [ 'a 'b 'c ] { 2 shift pop } in-list vis
+>? [ 4 3 2 1 ] { + + + } in-list vis
