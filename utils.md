@@ -52,7 +52,7 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 > 'in-list {
 >   swap {
 >     ,{ } set-stack ${ }
->     { ,{ ,{ stack } } set-stack ,{ stack } } exec
+>     { ,{ ,{ stack } } set-stack pop pop ,{ stack } } exec
 >   } exec
 > } defX
 >? [ 1 2 3 4 ] { swap } in-list vis
