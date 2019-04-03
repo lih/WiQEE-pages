@@ -9,7 +9,11 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 
 ### Navigating the environment
 
-> 'show-context { "" hypotheses { dup variable type swap "%s : %v\n%s" format } each print pop } defX
+> 'show-context {
+>    "" hypotheses
+>    { dup variable type swap "%s : %v\n%s" format } each
+>    print pop
+>  } defX
 > 'showdef { pattern-index 1 swapn swap index-insert set-pattern-index } defX
 > 'vis { show-context "-------\n" printf show-stack } defX
 
