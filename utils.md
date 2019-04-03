@@ -43,7 +43,7 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 
 > 'defconstr { 1 dupn swap showdef def } defX
 
-### Acting on list stacks
+### Acting on list as stacks
 
 > 'in-list {
 >   swap {
