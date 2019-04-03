@@ -45,4 +45,4 @@ Reminder : all builtin functions can be found documented [here](lexicon.html)
 
 ### Acting on list stacks
 
-> 'in-list { { ,{ } set-stack ${ } { ,{ ,{ stack } } set-stack pop pop ,{ } } exec } exec } defX
+> 'in-list { swap { ,{ } set-stack ${ } { ,{ ,{ stack } } set-stack pop pop ,{ } } exec } exec } defX
