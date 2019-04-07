@@ -225,24 +225,24 @@ stack.
 Constructing typed terms
 -----------------------
 
-### `universe`
+`universe`
 
-Produces a universe.
+: Produces a universe.
 
-`universe` : $i\ ...\ \rightarrow\ Set_i\ ...$
+    - `universe` : $i\ ...\ \rightarrow\ Set_i\ ...$
 
-### `variable`
+`variable`
 
-Given a variable name, that exists in the current type context,
+: Given a variable name, that exists in the current type context,
 produces that variable.
 
-`variable` : $name\ ...\ \rightarrow\ var(name)\ ...$
+    - `variable` : $name\ ...\ \rightarrow\ var(name)\ ...$
 
-### `apply`
+`apply`
 
-Given a function `f`, and a term `x`, produces the term `f x`.
+: Given a function `f`, and a term `x`, produces the term `f x`.
 
-`apply` : $x\ f\ ...\ \rightarrow\ (f\ x)\ ...$
+    - `apply` : $x\ f\ ...\ \rightarrow\ (f\ x)\ ...$
 
 ### `lambda` / `forall`
 
