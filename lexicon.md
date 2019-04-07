@@ -98,9 +98,9 @@ explicitly as a second argument (for example, from calling
 First-class functions
 ---------------------
 
-### `exec`
+`exec`
 
-Executes the value at the top of the stack, as if it were the meaning
+: Executes the value at the top of the stack, as if it were the meaning
 of a word. To illustrate, given a function, `'f $ exec` is equivalent
 to `f` itself. That is, evaluating a symbol is no different than
 looking it up in the current dictionary, and `exec`uting its value.
@@ -108,91 +108,91 @@ looking it up in the current dictionary, and `exec`uting its value.
 Lists
 -----
 
-### `[`
+`[`
 
-Puts a "list beginning" (LB) marker on the stack
+: Puts a "list beginning" (LB) marker on the stack
 
-`[` : $...\ \rightarrow\ LB\ ...$
+    - `[` : $...\ \rightarrow\ LB\ ...$
 
-### `]`
+`]`
 
-Creates a list of the elements on the stack until the next "list
+: Creates a list of the elements on the stack until the next "list
 beginning" marker, and pushes it on the remaining stack.
 
-`]` : $x_0..x_n\ LB\ ...\ \rightarrow\ [x_n..x_0]\ ...$
+    - `]` : $x_0..x_n\ LB\ ...\ \rightarrow\ [x_n..x_0]\ ...$
 
-### `each`
+`each`
 
-Iterates over each element of its second argument, pushing it on the
+: Iterates over each element of its second argument, pushing it on the
 stack and running its second argument afterward.
 
-Examples :
+    Examples :
 
-> "Values: " print [ 1 2 3 ] { show pop } each
+    > "Values: " print [ 1 2 3 ] { show pop } each
 
-### `range`
+`range`
 
-Create a list of numbers from 0 to $n-1$, $n$ being the top element of
+: Create a list of numbers from 0 to $n-1$, $n$ being the top element of
 the stack.
 
-`range` : $n\ ...\ \rightarrow\ [0..n-1]\ ...$
+    - `range` : $n\ ...\ \rightarrow\ [0..n-1]\ ...$
 
 Simple integer arithmetic
 -------------------------
 
-### `+`, `-`, `*`, `div`, `mod`
+`+`, `-`, `*`, `div`, `mod`
 
-Performs the usual binary arithmetic operation on the top two elements
+: Performs the usual binary arithmetic operation on the top two elements
 of the stack, and replaces them with the result.
 
-### `sign`
+`sign`
 
-Computes the sign of the top stack element. If the sign is negative, produces
+: Computes the sign of the top stack element. If the sign is negative, produces
 $-1$, if positive produces $1$, otherwise produces $0$.
 
 Strings
 -------
 
-### `format`
+`format`
 
-Much like the `sprintf()` function in C, produces a string which may
+: Much like the `sprintf()` function in C, produces a string which may
 contain textual representations of various other values.
 
-Examples :
+    Examples :
 
-> "Some text" 1 "<p>%v: %s</p>" format show
+    > "Some text" 1 "<p>%v: %s</p>" format show
 
-### `to-int`
+`to-int`
 
-Tries to convert the top stack element to an integer, if possible. 
+: Tries to convert the top stack element to an integer, if possible. 
 
 Interacting with the environment
 --------------------------------
 
-### `exit`
+`exit`
 
-Exits the interpreter, immediately and unconditionally.
+: Exits the interpreter, immediately and unconditionally.
 
-### `print`
+`print`
 
-Print the string at the top of the stack into the current document.
+: Print the string at the top of the stack into the current document.
 
-### `source`
+`source`
 
-Opens an external source file, and pushes a quote on the stack with
+: Opens an external source file, and pushes a quote on the stack with
 its contents.
 
-### `cache`
+`cache`
 
-Given a resource name and a quote, does one of two things :
+: Given a resource name and a quote, does one of two things :
 
-  - if the resource already exists, try to open it as a CaPriCon
-    object, ignoring the quote
-  - otherwise, run the quote and store its result in the resource
-    for future use
+    - if the resource already exists, try to open it as a CaPriCon
+      object, ignoring the quote
+    - otherwise, run the quote and store its result in the resource
+      for future use
 
-After the builtin has run, the contents of the requested object can be
-found at the top of the stack.
+    After the builtin has run, the contents of the requested object can be
+    found at the top of the stack.
 
 ### `redirect`
 
