@@ -35,6 +35,7 @@ indicated in the source by starting a line with `> `.
 
 > "<p>Such code is executed, and its output is added to the document.</p>" printf
 >? "Hello" printf
+>? version "CaPriCon version: %s\n" printf
 
 You can also write some inline code between "mustaches" (a mustache is
 a pair of nested `{}` inside the source), which will be executed as
