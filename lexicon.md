@@ -67,7 +67,7 @@ Names and variables
 
 : Sets the value of a variable.
 
-  - `def` : $value\ name\ ... \rightarrow ...$ in an environment where
+    - `def` : $value\ name\ ... \rightarrow ...$ in an environment where
 $value$ is associated with the variable named $name$.
 
   Examples :
