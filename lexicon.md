@@ -231,7 +231,7 @@ Constructing typed terms
 
     - `universe` : $i\ ...\ \rightarrow\ Set_i\ ...$
 
-<h3>`variable`</h3>
+`variable`
 
 : Given a variable name, that exists in the current type context,
 produces that variable.
@@ -244,89 +244,89 @@ produces that variable.
 
     - `apply` : $x\ f\ ...\ \rightarrow\ (f\ x)\ ...$
 
-### `lambda` / `forall`
+`lambda` / `forall`
 
-Abstracts the last hypothesis in context for the term at the top of
+: Abstracts the last hypothesis in context for the term at the top of
 the stack. That hypothesis is abstracted repectively as a
 lambda-abstraction, or a product.
 
-`lambda` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\lambda (h : T_h). x))\ ...$  
-`forall` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\forall (h : T_h), x))\ ...$
+    - `lambda` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\lambda (h : T_h). x))\ ...$  
+    - `forall` : $(\Gamma, h : T_h \vdash x)\ ... \rightarrow (\Gamma \vdash (\forall (h : T_h), x))\ ...$
 
-### `mu`
+`mu`
 
-Produces an inductive projection to a higher universe for the term at
+: Produces an inductive projection to a higher universe for the term at
 the top of the stack, if that term is of an inductive type.
 
-`mu` : $x\ ...\ \rightarrow\ \mu(x)\ ...$
+    - `mu` : $x\ ...\ \rightarrow\ \mu(x)\ ...$
 
-### `axiom`
+`axiom`
 
-Given a combinatorial type (a type without free variables) and an
+: Given a combinatorial type (a type without free variables) and an
 associated tag, produce an axiom with that tag, that can serve as a
 proof of the given type.
 
-`axiom` : $tag\ T\ ...\ \rightarrow\ Axiom_{T,tag}\ ...$
+    - `axiom` : $tag\ T\ ...\ \rightarrow\ Axiom_{T,tag}\ ...$
 
 Analysing typed terms
 ---------------------
 
-### `type`
+`type`
 
-Computes the type of the term at the top of the stack.
+: Computes the type of the term at the top of the stack.
 
-### `match`
+`match`
 
-Given a quote for each possible shape, and a term, executes the corresponding quote :
+: Given a quote for each possible shape, and a term, executes the corresponding quote :
 
-$k_{Set}\ k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{axiom}$ `match` :  
-$|\ \Gamma \vdash (\lambda (x : T_x). y)\ ...\ \rightarrow\ k_{\lambda}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
-$|\ \Gamma \vdash (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
-$|\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
-$|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
-$|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
-$|\ Axiom_{T,tag}\ ...\ \rightarrow\ k_{axiom}(tag\ T\ \ ...)$  
-$|\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ \ ...)$  
+    - $k_{Set}\ k_{\lambda}\ k_{\forall}\ k_{apply}\ k_{\mu}\ k_{var}\ k_{axiom}$ `match` :  
+    - $|\ \Gamma \vdash (\lambda (x : T_x). y)\ ...\ \rightarrow\ k_{\lambda}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
+    - $|\ \Gamma \vdash (\forall (x : T_x). y)\ ...\ \rightarrow\ k_{\forall}(\Gamma, x : T_x \vdash\ x\ y\ ...)$  
+    - $|\ (f x_1..x_n)\ ...\ \rightarrow\ k_{apply}([x_1..x_n]\ f\ ...)$  
+    - $|\ \mu(x)\ ...\ \rightarrow\ k_{\mu}(x\ ...)$  
+    - $|\ x\ ...\ \rightarrow\ k_{var}(name(x)\ ...)$  
+    - $|\ Axiom_{T,tag}\ ...\ \rightarrow\ k_{axiom}(tag\ T\ \ ...)$  
+    - $|\ Set_n\ ...\ \rightarrow\ k_{Set}(n\ \ ...)$  
 
-### `extract`
+`extract`
 
-Extract the term at the top of the stack into an abstract algebraic
+: Extract the term at the top of the stack into an abstract algebraic
 representation, suitable for the production of foreign functional
 code, such as OCaml or Haskell.
 
 Managing the type context
 -------------------------
 
-### `intro`
+`intro`
 
-Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
+: Given a type $T$ and a name $H$, adds a new hypothesis $H$ of type $T$
 to the context. Alternately, you can give a second hypothesis name
 $H'$, in which case the new hypothesis will be introduced before $H'$.
 
-`intro` :  
-$|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
-$|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_{H'},\Delta \vdash\ ...$  
+    `intro` :  
+    - $|\ \Gamma \vdash name(H)\ T\ ...\ \rightarrow \Gamma, H : T \vdash\ ...$  
+    - $|\ \Gamma,H' : T_{H'},\Delta \vdash name(H')\ name(H)\ T\ ...\ \rightarrow \Gamma, H : T,H' : T_{H'},\Delta \vdash\ ...$  
 
-### `extro-lambda` / `extro-forall`
+`extro-lambda` / `extro-forall`
 
-Clears the last hypothesis from the context. Every term that
+: Clears the last hypothesis from the context. Every term that
 references that hypothesis is abstracted either as a
 lambda-expression, or as a product, depending on the variant that was
 called.
 
-### `rename`
+`rename`
 
-Renames a hypothesis. This function takes two parameters : a
+: Renames a hypothesis. This function takes two parameters : a
 hypothesis name, and the new name to give it.
 
-### `substitute`
+`substitute`
 
-Given a hypothesis name, and a term of the same type as that
+: Given a hypothesis name, and a term of the same type as that
 hypothesis, remove that hypothesis from the context by substituting
 all its occurences by the given term.
 
-### `hypotheses`
+`hypotheses`
 
-Pushes a list of all the hypotheses' names in context, from most
+: Pushes a list of all the hypotheses' names in context, from most
 recent to the oldest.
 
