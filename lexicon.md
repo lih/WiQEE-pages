@@ -194,32 +194,32 @@ its contents.
     After the builtin has run, the contents of the requested object can be
     found at the top of the stack.
 
-### `redirect`
+`redirect`
 
-Given a resource name and a quote, executes the quote, redirecting
+: Given a resource name and a quote, executes the quote, redirecting
 its output to the resource.
 
 String-Indexed Dictionaries
 ---------------------------
 
-### `empty`
+`empty`
 
-Pushes the empty dictionary onto the stack.
+: Pushes the empty dictionary onto the stack.
 
-### `insert`
+`insert`
 
-Given a dictionary `d`, a key `k` and a value `v`, inserts the value `v` at
+: Given a dictionary `d`, a key `k` and a value `v`, inserts the value `v` at
 `k` in `d`, then pushes the result on the stack.
 
-### `delete`
+`delete`
 
-The reverse of `insert`. Given a dictionary `d` and a key `k`, produce
+: The reverse of `insert`. Given a dictionary `d` and a key `k`, produce
 a dictionary `d'` that is identical to `d`, without any association
 for `k`.
 
-### `keys`
+`keys`
 
-Given a dictionary `d`, pushes a list of all of `d`'s keys onto the
+: Given a dictionary `d`, pushes a list of all of `d`'s keys onto the
 stack.
 
 Constructing typed terms
