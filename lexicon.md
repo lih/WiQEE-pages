@@ -81,11 +81,11 @@ $value$ is associated with the variable named $name$.
 stack, this function produces the value of the corresponding variable
 in the current environment.
 
-  - `$` : $name\ ...\ \rightarrow\ \$name\ ...$
+    - `$` : $name\ ...\ \rightarrow\ \$name\ ...$
 
-### `vocabulary` / `set-vocabulary`
+`vocabulary` / `set-vocabulary`
 
-Pushes the active dictionary, that contains all defined variables, on
+: Pushes the active dictionary, that contains all defined variables, on
 top of the stack. In the second case, make the top of the stack the
 current dictionary, redefining all variables at once.
 
