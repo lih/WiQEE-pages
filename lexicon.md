@@ -89,9 +89,9 @@ in the current environment.
 top of the stack. In the second case, make the top of the stack the
 current dictionary, redefining all variables at once.
 
-### `lookup`
+`lookup`
 
-A more flexible version of `$`, where the environment is specified
+: A more flexible version of `$`, where the environment is specified
 explicitly as a second argument (for example, from calling
 `vocabulary`).
 
