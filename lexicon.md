@@ -70,9 +70,9 @@ Names and variables
     - `def` : $value\ name\ ... \rightarrow ...$ in an environment where
 $value$ is associated with the variable named $name$.
 
-  Examples :
+    Examples :
 
-  > 'x 3 def 'y 7 def
+    > 'x 3 def 'y 7 def
 > x y x y + y * "(x + y) * y = %v; y = %v ; x = %v" printf
 
 `$`
