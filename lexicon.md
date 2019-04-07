@@ -231,7 +231,7 @@ Constructing typed terms
 
     - `universe` : $i\ ...\ \rightarrow\ Set_i\ ...$
 
-### `variable`
+<h3>`variable`</h3>
 
 : Given a variable name, that exists in the current type context,
 produces that variable.
