@@ -50,7 +50,5 @@ followed by some non-space characters.
 
 > 'greetings
 >? vis
->? pop 'Bender 'is 'great
-
-
+>? pop 'Bender 'is 'great vis
 
