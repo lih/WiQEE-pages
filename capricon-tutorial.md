@@ -60,6 +60,6 @@ order in which they appear. Nothing mysterious here.
 You can also write numbers, in the usual decimal format, and those
 numbers will be pushed onto the stack as well.
 
-> 1 2
+> 1 2 10021321012
 >? vis
 
