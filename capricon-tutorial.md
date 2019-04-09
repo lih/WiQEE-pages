@@ -179,4 +179,6 @@ the constant was at the time of creation.
 Then, `local-exec` simply executes the newly-created function that
 already remembers the `vocabulary` from before. Our argument gets
 executed, then the old vocabulary that was captured is pushed on the
-stack, only to be restored to its rightful place by `set-vocabulary`.
+stack, only to be restored to its rightful place by
+`set-vocabulary`. We now have the newly calculated stack, in an
+environment where our vocabulary is unchange. All's well that ends well.
