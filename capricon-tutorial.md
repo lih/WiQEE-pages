@@ -168,7 +168,7 @@ solution that CaPriCon proposes :
 > clear 'local-exec {
 >   { exec ,{ vocabulary } set-vocabulary }
 >   exec } def
->? { 'x "red" def x dup "x=%v\n" printf } local-exec x vis
+>? { 'x "red" def x "x inside = %v\n" printf } local-exec x "x outside = %v\n" printf
 
 Let's break this down : `local-exec` is defined as the function that,
 first, creates a new function by splicing a constant -- derived from
