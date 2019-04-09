@@ -136,6 +136,4 @@ environment for correct evaluation, which isn't a very robust way to
 write programs.  
 For instance, let's say we want to be able to execute a quote in a
 local environment, so that all nouns defined during that quote's
-execution don't accidentally override a the outside vocabulary.
-
-We 
+execution don't accidentally override the outside vocabulary.
