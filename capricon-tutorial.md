@@ -162,7 +162,7 @@ Given what we know about the stack and the environment, nowhere is
 safe. A value on the stack can always be `pop`ped or `clear`ed, and a
 definition in the vocabulary can always be overridden.
 
-Answer, we save it in a quote. Without further ado, here is the
+Answer : we save it in a quote. Without further ado, here is the
 solution that CaPriCon proposes :
 
 > clear 'local-exec {
