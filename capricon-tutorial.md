@@ -176,10 +176,10 @@ running `vocabulary` -- between executing the top of the stack (our
 only argument of interest) and resetting the vocabulary to whatever
 the constant was at the time of creation.
 
-Then, `local-exec` simply executes the newly-created function that
+Then, `local-exec` simply executes the newly-created quote that
 already remembers the `vocabulary` from before. Our argument gets
 executed, then the old vocabulary that was captured is pushed on the
-stack, only to be restored to its rightful place by
+stack, only to be immediately restored to its rightful place by
 `set-vocabulary`. We now have the newly calculated stack, in an
 environment where our vocabulary is unchanged.
 
