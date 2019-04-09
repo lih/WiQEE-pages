@@ -181,7 +181,7 @@ already remembers the `vocabulary` from before. Our argument gets
 executed, then the old vocabulary that was captured is pushed on the
 stack, only to be restored to its rightful place by
 `set-vocabulary`. We now have the newly calculated stack, in an
-environment where our vocabulary is unchange.
+environment where our vocabulary is unchanged.
 
 <br/>
 
