@@ -168,7 +168,7 @@ solution that CaPriCon proposes :
 > 'local-quote {
 >   { exec ,{ vocabulary } set-vocabulary }
 >   exec } def
->? { 'x 130 def x 2 * } local-quote x
+>? { 'x 130 def x 2 * } local-quote x vis
 
 Let's break this down : `local-quote` is defined as the function that,
 first, creates a new function by splicing a constant `vocabulary`
