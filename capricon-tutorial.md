@@ -133,7 +133,10 @@ brackets, like so :
 That's all fairly straightforward, which is nice, but quotes of this
 form aren't very dynamic. They will always depend on their surrounding
 environment for correct evaluation, which isn't a very robust way to
-write programs.  
+write programs.
+
+  
+
 For instance, let's say we want to be able to execute a quote in a
 local environment, so that all nouns defined during that quote's
 execution don't accidentally override the outside vocabulary.
