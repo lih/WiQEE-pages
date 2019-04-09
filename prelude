@@ -24,6 +24,7 @@
 'tex { 'mustache. { "$%l$\n" printf 'mustache. ,{ dup $ } def } def } def
 'svg { 'mustache. { "<svg class='capricon-formula' width='150px' height='2em' viewBox='0 0 100 100' xmlns=\"http://www.w3.org/2000/svg\"><text class='formula-text' x='0' y='100'>%g</text></svg>" printf 'mustache. ,{ dup $ } def } def } def
 'raw { 'mustache. { "%s\n" printf 'mustache. ,{ dup $ } def } def } def
+'br { "<br/>" print } def
 
 'collect { { 'exports empty def ,{ } exec exports ,{ vocabulary } set-vocabulary } exec } def
 'exports empty def
