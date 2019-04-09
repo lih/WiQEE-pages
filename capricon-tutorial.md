@@ -158,7 +158,7 @@ the vocabulary), and restore the old vocabulary afterwards using
 
 The question is : where do we save the old vocabulary, so that
 executing the quote won't accidentally override the place we
-chose. Given what we know about the stack and the environment, nowhere
+chose ? Given what we know about the stack and the environment, nowhere
 is safe. A value on the stack can always be `pop`ped or `clear`ed, and
 a definition in the vocabulary can always be overridden.
 
