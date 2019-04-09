@@ -183,4 +183,6 @@ stack, only to be restored to its rightful place by
 `set-vocabulary`. We now have the newly calculated stack, in an
 environment where our vocabulary is unchange.
 
+<br/>
+
 All is well that ends well.
