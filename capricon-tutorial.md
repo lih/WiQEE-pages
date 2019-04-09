@@ -153,8 +153,8 @@ accidentally override the outside vocabulary.
 The idea is to use the `vocabulary` verb to retrieve the vocabulary
 before executing the quote, save that vocabulary somewhere, then run
 the quote (which can perform arbitrary modifications to the stack and
-the vocabulary), and restore the old vocabulary afterwards using
-`set-vocabulary`.
+the vocabulary), and finally restore the old vocabulary afterwards
+using `set-vocabulary`.
 
 The question is : where do we save the old vocabulary, so that
 executing the quote won't accidentally override the place we chose ?
