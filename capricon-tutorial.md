@@ -104,4 +104,4 @@ adding new definitions, and overriding old ones; and `$`, for looking
 symbols up. They can be used as follows :
 
 > 'x 3 def 'y 4 def
->? y 'x $ "y=%v; x=?v\n" printf
+>? y 'x $ "y=%v; x=%v\n" printf
