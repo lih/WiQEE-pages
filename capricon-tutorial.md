@@ -172,7 +172,7 @@ solution that CaPriCon proposes :
 
 Let's break this down : `local-exec` is defined as the function that,
 first, creates a new function by splicing a constant − derived from
-running `vocabulary` − between executing the top of the stack (our
+running `vocabulary`  between executing the top of the stack (our
 only argument of interest), and resetting the vocabulary to whatever
 the constant was at the time of creation.
 
