@@ -8,7 +8,7 @@
      } each
      
      { "<div class=\"capricon-examples\">%s</div>" format }
-     { } 2 3 shift pick exec
+     { 2 shift 2 - 2 shaft } 2 3 shift pick exec
      
      swap "<pre class=\"capricon capricon-paragraph capricon-context\">%n</pre>" format
    
