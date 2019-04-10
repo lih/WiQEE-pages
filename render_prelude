@@ -3,8 +3,8 @@
    'comment { print pop } def
    'begin-code-paragraph {
      "" 0 2 shift {
-       swap dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
-       swap
+       swap pop dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
+       1
      } each
      
      { "<div class=\"capricon-examples\">%s</div>" format }
