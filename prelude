@@ -27,7 +27,7 @@
 'raw { 'mustache. { "%s\n" printf 'mustache. ,{ dup $ } def } def } def
 'br { "<br/>" print } def
 
-'collect { { 'exports empty def ,{ } exec exports ,{ vocabulary } set-vocabulary } exec } def
+'collect { { 'exports empty def ${ } exports { ,{ ,{ vocabulary } } set-vocabulary ,{ ,{ stack } } set-stack ,{ exports } } exec } exec } def
 'exports empty def
 'export { exports swap dup $ insert 'exports swap def } def
 
@@ -57,18 +57,17 @@
 
 'tex-output {
    'comment { print pop } def
-   'begin-code-paragraph { pop swap pop "\\begin{code}\n%s\n\\end{code}\n" printf } def
+   'begin-code-paragraph { pop swap pop "\\begin{verbatim}\n%s\n\\end{verbatim}\n" printf } def
    'end-code-paragraph { "\n" print pop } def
    'begin-code-span { pop "\\textit{" print pop } def
    'end-code-span { pop "}" print pop } def
 } def
 
 'module {
-  dup source-dir "%s%s" format source
+  dup source-dir "%s%s" format source swap
   
-  dup 2 shaft 1 dupn
-    output-dir "%s%s.html.md" format html-output redirect
-    output-dir "%s%s.tex.md" format tex-output redirect
+  { output-dir "%s%s.tex.md" format tex-output redirect } collect pop
+  output-dir "%s%s.html.md" format html-output redirect
 } def
 'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def
 
