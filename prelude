@@ -34,3 +34,10 @@
 
 'module { dup source-dir "%s%s" format source swap output-dir "%s%s.mdc" format redirect } def
 'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def
+
+'comment { print pop } def
+'begin-code-paragraph { [ 3 shaft ] "%v" printf } def
+'end-code-paragraph { } def
+'begin-code-span { "%v" printf } def
+'end-code-span { "%v" printf } def
+
