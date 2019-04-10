@@ -3,3 +3,5 @@
 *.blob
 *.mdc
 \#*
+*.tex.md
+*.html.md
