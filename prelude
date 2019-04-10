@@ -20,6 +20,7 @@
 'times { range { pop dup exec } each pop } def
 'reverse { [ ] swap { cons } each } def
 
+'eol. { } def
 'mustache. { show } def
 'tex { 'mustache. { "$%l$\n" printf 'mustache. ,{ dup $ } def } def } def
 'svg { 'mustache. { "<svg class='capricon-formula' width='150px' height='2em' viewBox='0 0 100 100' xmlns=\"http://www.w3.org/2000/svg\"><text class='formula-text' x='0' y='100'>%g</text></svg>" printf 'mustache. ,{ dup $ } def } def } def
@@ -32,12 +33,44 @@
 
 [ 'source-dir 'output-dir 'cache-dir ] { "" def } each
 
-'module { dup source-dir "%s%s" format source swap output-dir "%s%s.mdc" format redirect } def
+'html-user-input "<div class=\"user-input interactive\"><button class=\"capricon-trigger\">Try It Out</button><label class=\"capricon-input-prefix\">&gt;&nbsp;<input type=\"text\" class=\"capricon-input\" /></label><pre class=\"capricon-output\"></pre></div>" def
+'html-output {
+   'comment { print pop } def
+   'begin-code-paragraph {
+     "" swap {
+       dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
+     } each
+     "<div class=\"capricon-examples\">%s</div>" format
+     
+     swap "<pre class=\"capricon capricon-paragraph capricon-context\">%n</pre>" format
+   
+     html-user-input 3 shaft 2 shift 1 +
+     "<span class=\"expand-then\" style=\"--num-lines: %v\"><div class=\"capricon-steps\">%s%s%s</div></span>" format
+   
+     "<label class=\"expansible box\"><span class=\"expand-else capricon-show\"></span><span class=\"expand-else capricon-hide\"></span>%s</label>" format
+     "%s<div class=\"capricon-paragraphresult\">" printf
+   } def
+   'end-code-paragraph { "</div>" printf } def
+   'begin-code-span { pop "<label class=\"expansible inline\"><span>" printf } def
+   'end-code-span { "</span><input type=\"checkbox\"><span class=\"expand-then\"><code class=\"capricon capricon-steps\">%n</code></span></label>" printf } def
+} def
+
+'tex-output {
+   'comment { print pop } def
+   'begin-code-paragraph { pop swap pop "\\begin{code}\n%s\n\\end{code}\n" printf } def
+   'end-code-paragraph { "\n" print pop } def
+   'begin-code-span { pop "\\textit{" print pop } def
+   'end-code-span { pop "}" print pop } def
+} def
+
+'module {
+  dup source-dir "%s%s" format source
+  
+  dup 2 shaft 1 dupn
+    output-dir "%s%s.html.md" format html-output redirect
+    output-dir "%s%s.tex.md" format tex-output redirect
+} def
 'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def
 
-'comment { print pop } def
-'begin-code-paragraph { [ 3 shaft ] "%v" printf } def
-'end-code-paragraph { } def
-'begin-code-span { "%v" printf } def
-'end-code-span { "%v" printf } def
+
 
