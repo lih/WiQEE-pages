@@ -44,7 +44,7 @@
      
      swap "<pre class=\"capricon capricon-paragraph capricon-context\">%n</pre>" format
    
-     html-user-input 3 shaft 2 shift 1 +
+     html-user-input 3 shaft 2 shift 3 +
      "<span class=\"expand-then\" style=\"--num-lines: %v\"><div class=\"capricon-steps\">%s%s%s</div></span>" format
    
      "<label class=\"expansible box\"><input type=\"checkbox\" checked=\"checked\" /><span class=\"expand-else capricon-show\"></span><span class=\"expand-then capricon-hide\"></span>%s</label>" format
