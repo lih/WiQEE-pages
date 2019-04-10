@@ -47,7 +47,7 @@
      html-user-input 3 shaft 2 shift 1 +
      "<span class=\"expand-then\" style=\"--num-lines: %v\"><div class=\"capricon-steps\">%s%s%s</div></span>" format
    
-     "<label class=\"expansible box\"><input type=\"checkbox\" checked=\"checked\" /><span class=\"expand-else capricon-show\"></span><span class=\"expand-else capricon-hide\"></span>%s</label>" format
+     "<label class=\"expansible box\"><input type=\"checkbox\" checked=\"checked\" /><span class=\"expand-else capricon-show\"></span><span class=\"expand-then capricon-hide\"></span>%s</label>" format
      "%s<div class=\"capricon-paragraphresult\">" printf
    } def
    'end-code-paragraph { "</div>" printf } def
