@@ -2,10 +2,13 @@
 'html-output {
    'comment { print pop } def
    'begin-code-paragraph {
-     "" swap {
-       dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
+     "" 0 2 shift {
+       swap dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
+       swap
      } each
-     "<div class=\"capricon-examples\">%s</div>" format
+     
+     { "<div class=\"capricon-examples\">%s</div>" format }
+     { } 2 3 shift pick exec
      
      swap "<pre class=\"capricon capricon-paragraph capricon-context\">%n</pre>" format
    
