@@ -1,0 +1,36 @@
+'html-user-input "<div class=\"user-input interactive\"><button class=\"capricon-trigger\">Try It Out</button><label class=\"capricon-input-prefix\">&gt;&nbsp;<input type=\"text\" class=\"capricon-input\" /></label><pre class=\"capricon-output\"></pre></div>" def
+'html-output {
+   'comment { print pop } def
+   'begin-code-paragraph {
+     "" swap {
+       dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
+     } each
+     "<div class=\"capricon-examples\">%s</div>" format
+     
+     swap "<pre class=\"capricon capricon-paragraph capricon-context\">%n</pre>" format
+   
+     html-user-input 3 shaft 2 shift 3 +
+     "<span class=\"expand-then\" style=\"--num-lines: %v\"><div class=\"capricon-steps\">%s%s%s</div></span>" format
+   
+     "<label class=\"expansible box\"><input type=\"checkbox\" checked=\"checked\" /><span class=\"expand-else capricon-show\"></span><span class=\"expand-then capricon-hide\"></span>%s</label>" format
+     "%s<div class=\"capricon-paragraphresult\">" printf
+   } def
+   'end-code-paragraph { "</div>" printf } def
+   'begin-code-span { pop "<label class=\"expansible inline\"><span>" printf } def
+   'end-code-span { "</span><input type=\"checkbox\"><span class=\"expand-then\"><code class=\"capricon capricon-steps\">%n</code></span></label>" printf } def
+} def
+
+'tex-output {
+   'comment { print pop } def
+   'begin-code-paragraph { pop swap pop "\\begin{verbatim}\n%s\n\\end{verbatim}\n" printf } def
+   'end-code-paragraph { "\n" print pop } def
+   'begin-code-span { pop "\\textit{" print pop } def
+   'end-code-span { pop "}" print pop } def
+} def
+
+'module {
+  dup source-dir "%s%s" format source swap
+  
+  { output-dir "%s%s.tex.md" format tex-output redirect } collect pop
+  output-dir "%s%s.html.md" format html-output redirect
+} def
