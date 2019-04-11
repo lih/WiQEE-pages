@@ -21,6 +21,8 @@
    'end-code-paragraph { "</div>" printf } def
    'begin-code-span { pop "<label class=\"expansible inline\"><span>" printf } def
    'end-code-span { "</span><input type=\"checkbox\"><span class=\"expand-then\"><code class=\"capricon capricon-steps\">%n</code></span></label>" printf } def
+   'newline { "<br/>" print pop } def
+   'newpage { "<hr/>" print pop } def
 } def
 
 'tex-output {
@@ -29,6 +31,8 @@
    'end-code-paragraph { "\n" print pop } def
    'begin-code-span { pop "\\textit{" print pop } def
    'end-code-span { pop "}" print pop } def
+   'newline { " \\\\ " print pop } def
+   'newpage { " \\newpage " print pop } def
 } def
 
 'module {
