@@ -34,7 +34,7 @@
 [ 'source-dir 'output-dir 'cache-dir ] { "" def } each
 
 'module { source-dir "%s%s" format source exec } def
-'require { dup dup "  * Required module: [%s]\(%s.html\)\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def
+'require { dup dup "  * Required module: [%s][:%s]\n" printf { ,{ dup } { module } collect } swap cache-dir "%s%s.mdo" format cache } def
 
 
 
