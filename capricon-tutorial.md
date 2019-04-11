@@ -201,6 +201,8 @@ with good reason, because we don't yet know how to build proofs.
 Please bear with me for this last section, as I try to explain how to
 build mathematical proofs out of stacks, quotes and a bit of magic.
 
+{.newpage.}
+
 Proof assembly
 ==============
 
