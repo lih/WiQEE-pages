@@ -1,8 +1,6 @@
 % First steps with CaPriCon
 % Marc Coiffier
 
-{.newpage.}
-
 This page is intended as a tutorial on the use of a stack-based proof
 environment like the one provided on this site. Since we're going to
 need to print things out, and we don't yet have the knowledge to write
