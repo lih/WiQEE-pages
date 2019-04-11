@@ -20,6 +20,8 @@ Now, in order to understand what a stack-based language is, we first
 have to understand the basic concept of a *stack*, and the role it
 plays during the execution of a script.
 
+{.newpage.}
+
 Stacks, and The Stack
 ---------------------
 
