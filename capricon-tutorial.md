@@ -31,7 +31,7 @@ will take place at the top unless specified otherwise.
 The most fundamental operations that can be carried out on a stack are
 *pushing* and *popping* values to and from it (at the top).
 
-<br/>
+{.newline.}
 
 What does that have to do with CaPriCon ? Well, stack-based languages,
 as their name implies, implicitly operate on a stack, that serves as
@@ -185,7 +185,7 @@ stack, only to be immediately restored to its rightful place by
 `set-vocabulary`. We now have the newly calculated stack, in an
 environment where our vocabulary is unchanged.
 
-<br/>
+{.newline.}
 
 This concludes the tour of all the basic CaPriCon language
 features. Once you've mastered those three concepts (nouns, verbs and
