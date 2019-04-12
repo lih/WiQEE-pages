@@ -2,7 +2,7 @@
 'html-output {
    'comment { print pop } def
    'begin-code-paragraph {
-     "" 0 2 shift {
+     "" 0 2 shift reverse {
        swap pop dup "<button class=\"capricon-example\" data-code=\"%a\"><pre class=\"capricon\">%n</pre></button>%s" format
        1
      } each
