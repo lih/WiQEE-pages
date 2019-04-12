@@ -129,8 +129,8 @@ brackets, like so :
 
 > pop pop pop 'is 'great
 > { swap 2 shift "%s %s %s !" format }
->? vis
 >? exec vis
+>? vis
 
 That's all fairly straightforward, which is nice, but quotes of this
 form aren't very dynamic. They will always depend on, and possibly
