@@ -106,7 +106,7 @@ $$
 
 We can easily prove simple properties for the $sameas$ relation, such as :
 
-  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}), \lambda (p:P x), p : (x sameas x)$
+  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}), \lambda (p:P x), p : (x\ sameas\ x)$
 
 Inductive Types
 -----------
