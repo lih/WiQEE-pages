@@ -37,6 +37,14 @@ At its simplest, it provides five basic constructions :
     $\forall (A:Set_{0}), \forall (a:A), A$, since $a$ is a valid
     proof of $A$ in its context.
 
+  - Applications, of the form $f\,x$, where $f : \forall (x:X), Y\,x$
+    and $x : X$, signify the specialization of a quantified property
+    over an object $x$.
+
+    For instance, given a proof $f$ of $\forall (x:\mathbb{N}), \exists
+    (y:\mathbb{N}), y = x+1$, we can prove that $\exists
+    (y:\mathbb{N}), y=10+1$, by applying $f$ to $10$ (aka. $f\,10$).
+
 Inductive Types
 -----------
 
