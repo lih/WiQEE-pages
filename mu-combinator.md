@@ -28,5 +28,5 @@ As a more concrete example, here is how the type of Booleans can be
 defined inductively :
 
 ~~~~~~~{.coq}
-Inductive Booleans : Type := True : Booleans | False : Booleans.
+Inductive Boolean : Type := True : Boolean | False : Boolean.
 ~~~~~~~~
