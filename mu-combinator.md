@@ -45,6 +45,8 @@ At its simplest, it provides five basic constructions :
     (y:\mathbb{N}), y = x+1$, we can prove that $\exists
     (y:\mathbb{N}), y=10+1$, by applying $f$ to $10$ (aka. $f\,10$).
 
+
+
 Inductive Types
 -----------
 
