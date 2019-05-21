@@ -78,7 +78,7 @@ false. Otherwise, our Boolean wouldn't be much use in a computation.
 With all that in mind, here is the definition I propose the $Boolean$ type :
 
 $$
-Boolean = \forall (P:Prop), \forall (ptrue:P), \forall (pfalse:P), P
+Boolean = \forall (P:Prop) (ptrue:P) (pfalse:P), P
 $$
 
 That is, a Boolean is a way to produce any $P$, given two alternatives
@@ -87,8 +87,8 @@ $ptrue$ and $pfalse$, and nothing else.
 There are, conveniently, two ways to construct a Boolean, given this
 definition :
 
-  - $true = \lambda (P:Prop). \lambda (ptrue:P). \lambda (pfalse:P). ptrue$
-  - $false = \lambda (P:Prop). \lambda (ptrue:P). \lambda (pfalse:P). pfalse$
+  - $true = \lambda (P:Prop) (ptrue:P) (pfalse:P). ptrue$
+  - $false = \lambda (P:Prop) (ptrue:P) (pfalse:P). pfalse$
 
 ### Sameness (aka. Identity)
 
@@ -102,7 +102,7 @@ $$
 
 We can easily prove simple properties for the $sameas$ relation, such as :
 
-  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P x). p : (x\ sameas\ x)$
+  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}) (p:P x). p : (x\ sameas\ x)$
   - symmetry : $\lambda (e:x\ sameas\ y) (P:A\ \rightarrow\ Set_{n}) (py:P y), e (\lambda (a:A). P\,a \rightarrow P\,x) (\lambda (px:P\,y). px) py$
 
 Inductive Types
