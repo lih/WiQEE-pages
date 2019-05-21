@@ -103,7 +103,7 @@ $$
 We can easily prove some intuitive properties for the $sameas$
 relation, such as :
 
-  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}) (p:P x). p : (x\ sameas\ x)$
+  - reflexivity : $(x\ sameas\ x)$, as proven by $\lambda (P:A\ \rightarrow\ Set_{n}) (p:P x). p$
 
   - symmetry : $(x\ sameas\ y) \rightarrow (y\ sameas\ x)$, proven by
     $\lambda (e:x\ sameas\ y) (P:A\ \rightarrow\ Set_{n}) (py:P y), e
