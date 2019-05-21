@@ -68,12 +68,8 @@ $false$, and what it means to "not be" something.
 
 In order for two things to be considered the same, they must at least
 belong to the same family. In this case, it means that $true$ and
-$false$ must have the same type.
-
-By convention, we like to call the type of "true or false" the
-$Boolean$ type, in honor of George Boole, who was one of the first
-logicians to start considering truth and falsity as concrete values
-rather than abstract concepts.
+$false$ must have the same type. By convention, we'll call the type of
+"true or false" the $Boolean$ type, in honor of George Boole.
 
 Given a Boolean $b$, we would like to be able to return different
 values from a function, depending on whether $b$ is true or
@@ -94,7 +90,7 @@ definition :
   - $true = \lambda (P:Prop). \lambda (ptrue:P). \lambda (pfalse:P). ptrue$
   - $false = \lambda (P:Prop). \lambda (ptrue:P). \lambda (pfalse:P). pfalse$
 
-### Sameness, and negation
+### Sameness (aka. Identity)
 
 Two values $x$ and $y$ can be said to be the same when everything that
 can be proven of $x$ can also be proven of $y$. More formally, given a
@@ -106,7 +102,8 @@ $$
 
 We can easily prove simple properties for the $sameas$ relation, such as :
 
-  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}), \lambda (p:P x), p : (x\ sameas\ x)$
+  - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P x). p : (x\ sameas\ x)$
+  - symmetry : $\lambda (e:x\ sameas\ y). lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P y), e (\lambda (a:A). P\,a \rightarrow P\,x) (\lambda (py:P\,y). py) p$
 
 Inductive Types
 -----------
