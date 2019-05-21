@@ -106,7 +106,7 @@ We can easily prove simple properties for the $sameas$ relation, such as :
 
   - symmetry : $(x\ sameas\ y) \rightarrow (y\ sameas\ x)$, proven by
     $\lambda (e:x\ sameas\ y) (P:A\ \rightarrow\ Set_{n}) (py:P y), e
-    \,(\lambda (a:A). P\,a \rightarrow P\,x)\,(\lambda (px:P\,y). px)\,py$
+    \,(\lambda (a:A). P\,a \rightarrow P\,x)\,(\lambda (px:P\,x). px)\,py$
     	      
   - transitivity : $(x\ sameas\ y)\ \rightarrow\ (y\ sameas\ z)\
     \rightarrow\ (x\ sameas\ z)$, as proven by $\lambda (e_1:x\ sameas\
