@@ -100,7 +100,8 @@ $$
 (x\ sameas\ y) = \forall (P:A\ \rightarrow\ Set_{n}), P\,x\ \rightarrow\ P\,y
 $$
 
-We can easily prove simple properties for the $sameas$ relation, such as :
+We can easily prove some intuitive properties for the $sameas$
+relation, such as :
 
   - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}) (p:P x). p : (x\ sameas\ x)$
 
