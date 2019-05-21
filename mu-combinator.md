@@ -103,7 +103,7 @@ $$
 We can easily prove simple properties for the $sameas$ relation, such as :
 
   - reflexivity : $\lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P x). p : (x\ sameas\ x)$
-  - symmetry : $\lambda (e:x\ sameas\ y). lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P y), e (\lambda (a:A). P\,a \rightarrow P\,x) (\lambda (py:P\,y). py) p$
+  - symmetry : $\lambda (e:x\ sameas\ y). \lambda (P:A\ \rightarrow\ Set_{n}). \lambda (p:P y), e (\lambda (a:A). P\,a \rightarrow P\,x) (\lambda (py:P\,y). py) p$
 
 Inductive Types
 -----------
