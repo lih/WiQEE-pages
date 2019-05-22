@@ -176,3 +176,7 @@ $$
 \equiv
 \mu_{\Gamma, (x:T)}(y)
 $$
+
+$$
+\mu(x) \equiv \mu_{\empty}(x)
+$$
