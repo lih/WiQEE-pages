@@ -178,5 +178,5 @@ $$
 $$
 
 $$
-\mu(x) \equiv \mu_{\empty}(x)
+\mu(x) \equiv \mu_{\varnothing}(x)
 $$
