@@ -121,7 +121,7 @@ $true$ or $false$. First, let's formally state that property :
 
 $$
 \forall (b:Boolean), (b\ =\ true) \cup (b\ =\ false) \\
-= \forall (b:Boolean) (P:Set_{n}), (b\ =\ true\ \rightarrow\ P)\ \rightarrow\ (b\ =\ false\ \rightarrow\ P)\ \rightarrow\ P
+\equiv \forall (b:Boolean) (P:Set_{n}), (b\ =\ true\ \rightarrow\ P)\ \rightarrow\ (b\ =\ false\ \rightarrow\ P)\ \rightarrow\ P
 $$
 
 Inductive Types
