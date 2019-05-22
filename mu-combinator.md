@@ -172,11 +172,15 @@ The $\mu$ Combinator
 --------------------
 
 $$
+\mu(x) \equiv \mu_{\varnothing}(x)
+$$
+
+$$
 \mu_{\Gamma}(\lambda(x:T). y)
 \equiv
 \mu_{\Gamma, (x:T)}(y)
 $$
 
 $$
-\mu(x) \equiv \mu_{\varnothing}(x)
+\mu_{\Gamma}(H x...) \equiv \lambda^* \Gamma^\uparrow. H x^\uparrow...
 $$
