@@ -186,7 +186,7 @@ $$
 $$
 
 $$
-\varnothing^\uparrow \equiv \varnothing
-(\Gamma, (x:T_{\Gamma}))^\uparrow \equiv \Gamma^\uparrow, (x:T_{\Gamma^\uparrow}) \\
+\varnothing^\uparrow \equiv \varnothing \\
+(\Gamma, (x:T_{\Gamma}))^\uparrow \equiv \Gamma^\uparrow, (x:T_{\Gamma^\uparrow})
 $$
 
