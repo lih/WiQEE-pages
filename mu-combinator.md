@@ -182,6 +182,6 @@ $$
 $$
 
 $$
-\mu_{\Gamma}(H_{Gamma} x_{\Gamma}...) \equiv \lambda^* \Gamma^\uparrow. H_{\Gamma^\uparrow} x_{Gamma^\uparrow}...
+\mu_{\Gamma}(H_{\Gamma} x_{\Gamma}...) \equiv \lambda^* \Gamma^\uparrow. H_{\Gamma^\uparrow} x_{\Gamma^\uparrow}...
 $$
 
