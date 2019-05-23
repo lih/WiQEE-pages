@@ -185,3 +185,8 @@ $$
 \mu_{\Gamma}(H_{\Gamma} x_{\Gamma}...) \equiv \lambda^* \Gamma^\uparrow. H_{\Gamma^\uparrow} x_{\Gamma^\uparrow}...
 $$
 
+$$
+\varnothing^\uparrow \equiv \varnothing
+(\Gamma, (x:T_{\Gamma}))^\uparrow \equiv \Gamma^\uparrow, (x:T_{\Gamma^\uparrow}) \\
+$$
+
