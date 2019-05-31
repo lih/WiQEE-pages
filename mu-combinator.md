@@ -168,7 +168,7 @@ principle* for Booleans. In Coq, it will be given the name
 (P:Boolean\,\rightarrow\,Type),\ P\,true\ \rightarrow\ P\,false\
 \rightarrow\ \forall (b:Boolean),\ P\,b$.
 
-The $\mu$ Combinator
+The $\mu$ Combinator : Constructions with extra steps
 --------------------
 
 $$
