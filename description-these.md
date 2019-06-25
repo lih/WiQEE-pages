@@ -37,7 +37,7 @@ m_S &: \forall n (x y z t : V_{n}) (f : M_{n} x y) (g : M_{n} z t), M_{S n} (v_S
 \end{align}
 
 Coq (et d'autres assistants basés sur le CIC) ne permet pas la
-définition de familles mutuellement inductives (comme les $O_n$ et
+définition de familles mutuellement inductives (comme les $V_n$ et
 $M_n$ définis ci-dessus) si l'une des familles doit servir d'index à
 l'autre. Cette limite est justifiée par l'apparente impossibilité de
 faire référence à un constructeur dans le type d'un autre
