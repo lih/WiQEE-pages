@@ -20,8 +20,8 @@ suit :
 
 Soient $O$ un type d'objets, et pour toute paire d'objets $x$ et $y$,
 un type $M x y$ des morphismes de $x$ vers $y$. On aimerait définir
-les types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) des
-diagrammes de dimension $n$, comme suit :
+les types $O_{n}$ et $M_{n} x y$ des diagrammes de dimension $n$,
+comme suit :
 
 \begin{align}
 o_O &: O \rightarrow O_{0} \\
