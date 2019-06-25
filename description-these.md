@@ -17,7 +17,7 @@ intéressante à apporter.
 Limites du CIC simple
 ---------------------
 
-Lors de ces explorations, j'ai voulu modéliser des omega-catégories
+Lors de ces explorations, j'ai voulu modéliser des $\omega$-catégories
 (si je ne m'abuse sur les nomenclatures), définies intuitivement comme
 suit :
 
