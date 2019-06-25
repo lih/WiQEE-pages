@@ -32,5 +32,13 @@ m_S &: \forall n (x y z t : O_{n}) (f : M_{n} x y) (g : M_{n} z t), M_{S n} (o_S
 \end{align}
 
 Coq (et d'autres assistants basés sur le CIC) ne permet pas la
-définition de 
+définition de familles mutuellement inductives (comme les $O_n$ et
+$M_n$ définis ci-dessus) si l'une des familles doit servir d'index à
+l'autre. Cette limite est justifiée par l'apparente impossibilité de
+faire référence à un constructeur dans le type d'un autre
+constructeur si les deux appartiennent à la même famille.
 
+Malgré celà, il est plutôt simple de définir un encodage de Church de
+cette famille ($\forall (O:\mathbb{N} \rightarrow Type) (M:forall n, O
+n \rightarrow O n \rightarrow Type) (o0 : o -> O 0) (oS : ...) ..., O
+n$, par exemple).
