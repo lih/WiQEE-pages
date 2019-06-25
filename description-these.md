@@ -102,6 +102,6 @@ Un interpréteur de ce nouveau modèle de calcul -- CoC + $\mu$, appelé
 le Calcul des Constructions Prismatiques pour rappeler la métaphore
 des "reflets with extra steps" -- est rendu disponible sur une
 plateforme Web interactive, ainsi que sous une forme plus classique,
-accessible à l'adresse https://wiqee.curly-lang.org (susceptible de
+à l'adresse https://wiqee.curly-lang.org (susceptible de
 changer dans le futur).
 
