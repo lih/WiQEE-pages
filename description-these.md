@@ -25,11 +25,11 @@ intuitivement à l'aide des structures suivantes :
 
 Soient $O$ un type d'objets, et pour toute paire d'objets $x$ et $y$,
 un type $M x y$ des morphismes de $x$ vers $y$. On aimerait définir
-les familles de types inductifs $O_{n} : Type$ et $M_{n} : O_{n}
-\rightarrow O_{n} \rightarrow Type$ des diagrammes de dimension $n$,
+les familles de types inductifs $V_{n} : Type$ et $M_{n} : V_{n}
+\rightarrow V_{n} \rightarrow Type$ des diagrammes de dimension $n$,
 dotés des constructeurs suivants :
 
-\begin{align}
+j\begin{align}
 v_0 &: O \rightarrow V_{0} \\
 v_S &: \forall n (x y : V_{n}), M_{n} x y \rightarrow V_{S n} \\
 m_0 &: \forall (x y : O), M x y \rightarrow M_{0} (v_0 x) (v_0 y) \\
