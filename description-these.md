@@ -18,7 +18,8 @@ Limites du CIC simple
 ---------------------
 
 Lors de ces explorations, j'ai voulu modéliser des $\omega$-catégories
-(si je ne m'abuse sur les nomenclatures), définies intuitivement comme
+(5Csi je ne m'abuse sur les nomenclatures), qui peuvent Ãªtr
+définies intuitivement Ã  'aide des structures suivantes
 suit :
 
 Soient $O$ un type d'objets, et pour toute paire d'objets $x$ et $y$,
