@@ -20,15 +20,17 @@ suit :
 
 Soient $O$ un type d'objets, et pour toute paire d'objets $x$ et $y$,
 un type $M x y$ des morphismes de $x$ vers $y$. On aimerait définir
-les types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) comme
-suit :
+les types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) des
+diagrammes de dimension $n$ comme suit :
 
 \begin{align}
 o_O &: O \rightarrow O_{0} \\
 o_S &: \forall n (x y : O_{n}), M_{n} x y \rightarrow O_{S n} \\
 M_{n} &: O_{n} \rightarrow O_{n} \rightarrow Type \\
-m_O &: \forall (x y : O), M_{0} (o_O x) (o_O y) \\
+m_O &: \forall (x y : O), M x y \rightarrow M_{0} (o_O x) (o_O y) \\
 m_S &: \forall n (x y z t : O_{n}) (f : M_{n} x y) (g : M_{n} z t), M_{S n} (o_S ... f) (o_S ... g) 
 \end{align}
 
+Coq (et d'autres assistants basés sur le CIC) ne permet pas la
+définition de 
 
