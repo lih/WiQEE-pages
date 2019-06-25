@@ -23,7 +23,7 @@ un type $M x y$ des morphismes de $x$ vers $y$. On peut définir les
 types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) comme suit :
 
 $$
-oO : O \rightarrow O_{0} \\
+oO : O \rightarrow O_{0} \\  
 oS : \forall n (x y : O_{n}), M_{n} x y \rightarrow O_{S n}
 $$
 
