@@ -103,4 +103,4 @@ le Calcul des Constructions Prismatiques pour rappeler la métaphore
 des "reflets with extra steps" -- est rendu disponible sur une
 plateforme Web interactive, ainsi que sous une forme plus classique, à
 l'adresse [https://wiqee.curly-lang.org](https://wiqee.curly-lang.org).
-
+Ã©
