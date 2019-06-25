@@ -93,7 +93,7 @@ récursion dans la sémantique opérationnelle des principes d'induction.
 Étant donné un encodage de Church, on peut faire le travail inverse,
 et générer automatiquement le type du principe d'induction canonique
 de cet encodage. Dans ma thèse, j'introduis un nouvel opérateur, noté
-$\mu(x)$, dont c'est le rôlé : étant donné une valeur inductive $x$,
+$\mu(x)$, dont c'est le rôle : étant donné une valeur inductive $x$,
 produire un terme dont la structure "reflète" celle de $x$, en y
 ajoutant les paramètres nécessaires à la preuve du principe
 d'induction spécialisé sur $x$.
