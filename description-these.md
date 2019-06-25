@@ -29,9 +29,9 @@ oS : \forall n (x y : O_{n}), M_{n} x y \rightarrow O_{S n}
 $$
 
 \begin{align}
-M_{n} : O_{n} \rightarrow O_{n} \rightarrow Type \\
-mO : \forall (x y : O), M_{0} (o0 x) (o0 y) \\
-mS : \forall n (x y z t : O_{n}) (f : M_{n} x y) (g : M_{n} z t), M_{S n} (oS ... f) (oS ... g) 
+M_{n} &: O_{n} \rightarrow O_{n} \rightarrow Type \\
+mO &: \forall (x y : O), M_{0} (o0 x) (o0 y) \\
+mS &: \forall n (x y z t : O_{n}) (f : M_{n} x y) (g : M_{n} z t), M_{S n} (oS ... f) (oS ... g) 
 \end{align}
 
 
