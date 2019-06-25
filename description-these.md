@@ -19,8 +19,9 @@ Lors de ces explorations, j'ai voulu modéliser des omega-catégories
 suit :
 
 Soient $O$ un type d'objets, et pour toute paire d'objets $x$ et $y$,
-un type $M x y$ des morphismes de $x$ vers $y$. On peut définir les
-types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) comme suit :
+un type $M x y$ des morphismes de $x$ vers $y$. On aimerait définir
+les types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) comme
+suit :
 
 $$
 oO : O \rightarrow O_{0} \\  
