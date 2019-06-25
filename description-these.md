@@ -23,10 +23,10 @@ un type $M x y$ des morphismes de $x$ vers $y$. On aimerait définir
 les types $O_{n}$ et $M_{n} x y$ (indexés par un naturel $n$) comme
 suit :
 
-$$
-oO : O \rightarrow O_{0} \\
-oS : \forall n (x y : O_{n}), M_{n} x y \rightarrow O_{S n}
-$$
+\begin{align}
+oO &: O \rightarrow O_{0} \\
+oS &: \forall n (x y : O_{n}), M_{n} x y \rightarrow O_{S n}
+\end{align}
 
 \begin{align}
 M_{n} &: O_{n} \rightarrow O_{n} \rightarrow Type \\
