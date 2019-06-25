@@ -39,6 +39,6 @@ faire référence à un constructeur dans le type d'un autre
 constructeur si les deux appartiennent à la même famille.
 
 Malgré celà, il est plutôt simple de définir un encodage de Church de
-cette famille ($\forall (O:\mathbb{N} \rightarrow Type) (M:forall n, O
+cette famille ($\forall (O:\mathbb{N} \rightarrow Type) (M:\forall n, O
 n \rightarrow O n \rightarrow Type) (o0 : o -> O 0) (oS : ...) ..., O
 n$, par exemple).
