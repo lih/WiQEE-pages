@@ -1,7 +1,7 @@
 % Thèse : Définition et implémentation de schémas calculatoires pour la preuve de programmes
 % Marc Coiffier
 
-À faire :
+*À faire* :
 
   - renseigner machine CAM
   - développer le COq -> Mu
